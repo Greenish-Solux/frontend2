@@ -36,14 +36,18 @@ class MainActivity : AppCompatActivity() {
 //                    supportFragmentManager.beginTransaction().replace(R.id.main_container, MyPlantFragment()).commit()
 //                    true
 //                }
-//                R.id.navigation_search -> {
-//                    supportFragmentManager.beginTransaction().replace(R.id.main_container, SearchFragment()).commit()
-//                    true
-//                }
-//                R.id.navigation_extra -> {
-//                    supportFragmentManager.beginTransaction().replace(R.id.main_container, SettingsFragment()).commit()
-//                    true
-//                }
+                R.id.navigation_search -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.main_container, SearchFragment()).commit()
+                    true
+                }
+
+                R.id.navigation_extra -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.main_container, MypageFragment()).commit()
+                    true
+                }
+
                 else -> false
             }
         }

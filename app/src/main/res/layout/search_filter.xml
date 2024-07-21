@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".SearchFragment"
+    tools:ignore="ExtraText">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/iv_search_filter_box"
+            android:layout_width="390dp"
+            android:layout_height="543dp"
+            android:src="@drawable/bg_r10_white_fill"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/tv_search_filter_text1"
+                    android:layout_width="226dp"
+                    android:layout_height="34dp"
+                    android:fontFamily="@font/prebold"
+                    android:gravity="center_vertical|start"
+                    android:text="식집사 검색필터"
+                    android:textColor="#525252"
+                    android:textSize="20sp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="341dp"
+                    android:layout_marginTop="21dp"
+                    android:src="@drawable/frame_1042"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="76dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/tv_search_filter_text2"
+                    android:layout_width="226dp"
+                    android:layout_height="34dp"
+                    android:fontFamily="@font/premedium"
+                    android:gravity="center_vertical|start"
+                    android:text="식집사 레벨"
+                    android:textColor="#C2C3C7"
+                    android:textSize="15sp"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <ImageView
+                    android:layout_width="83dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="32dp"
+                    android:src="@drawable/bg_r100_gray_line"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="71.5dp"
+                    android:layout_height="36dp"
+                    android:fontFamily="@font/premedium"
+                    android:gravity="center"
+                    android:text="초보자"
+                    android:textColor="#525252"
+                    android:textSize="14sp"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <ImageView
+                    android:layout_width="83dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="123dp"
+                    android:layout_marginTop="32dp"
+                    android:src="@drawable/bg_r100_gray_line"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="71.5dp"
+                    android:layout_height="36dp"
+                    android:fontFamily="@font/premedium"
+                    android:gravity="center"
+                    android:text="경험자"
+                    android:textColor="#525252"
+                    android:textSize="14sp"
+                    android:layout_marginStart="128dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <ImageView
+                    android:layout_width="83dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="32dp"
+                    android:src="@drawable/bg_r100_gray_line"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="71.5dp"
+                    android:layout_height="36dp"
+                    android:fontFamily="@font/premedium"
+                    android:gravity="center"
+                    android:text="전문가"
+                    android:textColor="#525252"
+                    android:textSize="14sp"
+                    android:layout_marginStart="225dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="76dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/tv_search_filter_text3"
+                    android:layout_width="226dp"
+                    android:layout_height="34dp"
+                    android:fontFamily="@font/premedium"
+                    android:gravity="center_vertical|start"
+                    android:text="꽃 색상"
+                    android:textColor="#C2C3C7"
+                    android:textSize="15sp"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <ImageView
+                    android:layout_width="83dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="32dp"
+                    android:src="@drawable/bg_r100_gray_line"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="71.5dp"
+                    android:layout_height="36dp"
+                    android:fontFamily="@font/premedium"
+                    android:gravity="center"
+                    android:text="분홍색"
+                    android:textColor="#525252"
+                    android:textSize="14sp"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <ImageView
+                    android:layout_width="83dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="123dp"
+                    android:layout_marginTop="32dp"
+                    android:src="@drawable/bg_r100_gray_line"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="71.5dp"
+                    android:layout_height="36dp"
+                    android:fontFamily="@font/premedium"
+                    android:gravity="center"
+                    android:text="흰색"
+                    android:textColor="#525252"
+                    android:textSize="14sp"
+                    android:layout_marginStart="128dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/tv_search_filter_text4"
+                    android:layout_width="226dp"
+                    android:layout_height="34dp"
+                    android:fontFamily="@font/premedium"
+                    android:gravity="center_vertical|start"
+                    android:text="온도"
+                    android:textColor="#C2C3C7"
+                    android:textSize="15sp"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_search_filter_line1"
+                    android:layout_width="324dp"
+                    android:layout_height="9dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="35dp"
+                    android:src="@drawable/ic_search_filter_line1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="9dp"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="35dp"
+                    android:src="@drawable/line_170"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_search_filter_circle1"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginStart="110dp"
+                    android:layout_marginTop="33dp"
+                    android:src="@drawable/iv_search_filter_circle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="23dp"
+                    android:layout_height="36dp"
+                    android:fontFamily="@font/premedium"
+                    android:gravity="center"
+                    android:text="16°C"
+                    android:textColor="#C2C3C7"
+                    android:textSize="10sp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="37dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:fontFamily="@font/premedium"
+                    android:gravity="center"
+                    android:text="17°C"
+                    android:textColor="#5AC479"
+                    android:textSize="13sp"
+                    android:layout_marginStart="104dp"
+                    android:layout_marginTop="37dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:layout_width="23dp"
+                    android:layout_height="36dp"
+                    android:fontFamily="@font/premedium"
+                    android:gravity="center"
+                    android:text="18°C"
+                    android:textColor="#C2C3C7"
+                    android:textSize="10sp"
+                    android:layout_marginStart="183dp"
+                    android:layout_marginTop="37dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:layout_width="23dp"
+                    android:layout_height="36dp"
+                    android:fontFamily="@font/premedium"
+                    android:gravity="center"
+                    android:text="19°C"
+                    android:textColor="#C2C3C7"
+                    android:textSize="10sp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="37dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:fontFamily="@font/premedium"
+                    android:gravity="center"
+                    android:text="20°C"
+                    android:textColor="#C2C3C7"
+                    android:textSize="10sp"
+                    android:layout_marginStart="340dp"
+                    android:layout_marginTop="37dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/tv_search_filter_text5"
+                    android:layout_width="226dp"
+                    android:layout_height="34dp"
+                    android:fontFamily="@font/premedium"
+                    android:gravity="center_vertical|start"
+                    android:text="습도"
+                    android:textColor="#C2C3C7"
+                    android:textSize="15sp"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_search_filter_line2"
+                    android:layout_width="324dp"
+                    android:layout_height="9dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="35dp"
+                    android:src="@drawable/ic_search_filter_line1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="114dp"
+                    android:layout_height="9dp"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="35dp"
+                    android:src="@drawable/line_172"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_search_filter_circle2"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginStart="146dp"
+                    android:layout_marginTop="33dp"
+                    android:src="@drawable/iv_search_filter_circle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="23dp"
+                    android:layout_height="36dp"
+                    android:fontFamily="@font/premedium"
+                    android:gravity="center"
+                    android:text="40%"
+                    android:textColor="#C2C3C7"
+                    android:textSize="10sp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="37dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:fontFamily="@font/premedium"
+                    android:gravity="center"
+                    android:text="70%"
+                    android:textColor="#C2C3C7"
+                    android:textSize="10sp"
+                    android:layout_marginStart="340dp"
+                    android:layout_marginTop="37dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="89dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/tv_search_filter_text6"
+                    android:layout_width="226dp"
+                    android:layout_height="34dp"
+                    android:fontFamily="@font/premedium"
+                    android:gravity="center_vertical|start"
+                    android:text="배치 장소"
+                    android:textColor="#C2C3C7"
+                    android:textSize="15sp"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <ImageView
+                    android:layout_width="83dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="32dp"
+                    android:src="@drawable/bg_r100_gray_line"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="71.5dp"
+                    android:layout_height="36dp"
+                    android:fontFamily="@font/premedium"
+                    android:gravity="center"
+                    android:text="거실"
+                    android:textColor="#525252"
+                    android:textSize="14sp"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <ImageView
+                    android:layout_width="83dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="123dp"
+                    android:layout_marginTop="32dp"
+                    android:src="@drawable/bg_r100_gray_line"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="71.5dp"
+                    android:layout_height="36dp"
+                    android:fontFamily="@font/premedium"
+                    android:gravity="center"
+                    android:text="발코니"
+                    android:textColor="#525252"
+                    android:textSize="14sp"
+                    android:layout_marginStart="128dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <ImageView
+                    android:layout_width="83dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="32dp"
+                    android:src="@drawable/bg_r100_gray_line"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="71.5dp"
+                    android:layout_height="36dp"
+                    android:fontFamily="@font/premedium"
+                    android:gravity="center"
+                    android:text="방"
+                    android:textColor="#525252"
+                    android:textSize="14sp"
+                    android:layout_marginStart="225dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/iv_search_filter_ok"
+                    android:layout_width="216dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="87dp"
+                    android:src="@drawable/bg_r10_green_fill"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_search_filter_ok"
+                    android:layout_width="186dp"
+                    android:layout_height="31dp"
+                    android:fontFamily="@font/premedium"
+                    android:gravity="center"
+                    android:text="적용하기"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19sp"
+                    android:layout_marginStart="102dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

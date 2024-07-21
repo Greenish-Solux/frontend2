@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/iv_environment_bar"
+                android:layout_width="66dp"
+                android:layout_height="4dp"
+                android:layout_marginStart="163dp"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/ic_mypage_bar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="480dp"
+            android:background="#EFEFF1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_environment_box1"
+                android:layout_width="340dp"
+                android:layout_height="127dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/bg_r10_white_fill"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_environment_text1"
+                android:layout_width="159dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="49dp"
+                android:layout_marginTop="42dp"
+                android:fontFamily="@font/prebold"
+                android:gravity="center_vertical|start"
+                android:text="장소"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_environment_text1_1"
+                android:layout_width="220dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="44dp"
+                android:fontFamily="@font/premedium"
+                android:gravity="center_vertical|start"
+                android:text="위치를 기반으로 온도와 습도를 추적할 수 있어요!"
+                android:textColor="#929292"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_environment_place"
+                android:layout_width="292dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="49dp"
+                android:layout_marginTop="88dp"
+                android:src="@drawable/ic_environment_place"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_environment_check"
+                android:layout_width="13.35dp"
+                android:layout_height="9.61dp"
+                android:layout_marginStart="316dp"
+                android:layout_marginTop="97dp"
+                android:src="@drawable/ic_environment_check"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/iv_environment_box2"
+                android:layout_width="340dp"
+                android:layout_height="127dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="178dp"
+                android:src="@drawable/bg_r10_white_fill"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_environment_text2"
+                android:layout_width="159dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="49dp"
+                android:layout_marginTop="192dp"
+                android:fontFamily="@font/prebold"
+                android:gravity="center_vertical|start"
+                android:text="환경 온도"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_environment_text2_1"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="194dp"
+                android:fontFamily="@font/premedium"
+                android:gravity="center_vertical|start"
+                android:text="현재 바깥 온도 12도"
+                android:textColor="#929292"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_environment_temp"
+                android:layout_width="291dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="245dp"
+                android:src="@drawable/ic_environment_selected2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_environment_temp1"
+                android:layout_width="25dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="98dp"
+                android:layout_marginTop="252dp"
+                android:fontFamily="@font/premedium"
+                android:gravity="center_vertical|start"
+                android:text="더움"
+                android:textColor="#5AC479"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_environment_temp2"
+                android:layout_width="28dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="182dp"
+                android:layout_marginTop="252dp"
+                android:fontFamily="@font/premedium"
+                android:gravity="center_vertical|start"
+                android:text="동일"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_environment_temp3"
+                android:layout_width="25dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="266dp"
+                android:layout_marginTop="252dp"
+                android:fontFamily="@font/premedium"
+                android:gravity="center_vertical|start"
+                android:text="추움"
+                android:textColor="#5AC479"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/iv_environment_box3"
+                android:layout_width="340dp"
+                android:layout_height="127dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="328dp"
+                android:src="@drawable/bg_r10_white_fill"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_environment_text3"
+                android:layout_width="159dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="49dp"
+                android:layout_marginTop="342dp"
+                android:fontFamily="@font/prebold"
+                android:gravity="center_vertical|start"
+                android:text="환경 습도"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_environment_text3_1"
+                android:layout_width="70dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="344dp"
+                android:fontFamily="@font/premedium"
+                android:gravity="center_vertical|start"
+                android:text="현재 바깥 습도"
+                android:textColor="#929292"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_environment_humid"
+                android:layout_width="291dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="395dp"
+                android:src="@drawable/ic_environment_selected2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_environment_humid1"
+                android:layout_width="25dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="98dp"
+                android:layout_marginTop="402dp"
+                android:fontFamily="@font/premedium"
+                android:gravity="center_vertical|start"
+                android:text="습함"
+                android:textColor="#5AC479"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_environment_humid2"
+                android:layout_width="28dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="182dp"
+                android:layout_marginTop="402dp"
+                android:fontFamily="@font/premedium"
+                android:gravity="center_vertical|start"
+                android:text="동일"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_environment_humid3"
+                android:layout_width="25dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="266dp"
+                android:layout_marginTop="402dp"
+                android:fontFamily="@font/premedium"
+                android:gravity="center_vertical|start"
+                android:text="건조"
+                android:textColor="#5AC479"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp">
+
+            <TextView
+                android:id="@+id/tv_search_result_page_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/prebold"
+                android:text="'선인장'"
+                android:textColor="#5AC479"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_search_result_page_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginStart="101dp"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/prebold"
+                android:text="이 무엇인가요?"
+                android:textColor="#525252"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="330dp">
+
+            <ImageView
+                android:id="@+id/iv_search_result_page_image"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_marginStart="49dp"
+                android:src="@drawable/ic_search_result"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_search_result_page_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="239dp"
+                android:layout_marginTop="296dp"
+                android:fontFamily="@font/premedium"
+                android:gravity="center"
+                android:text="이미지 출처: 나무위키"
+                android:textColor="#D2D2D2"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="273dp">
+
+            <TextView
+                android:id="@+id/tv_search_result_page_text4"
+                android:layout_width="304dp"
+                android:layout_height="273dp"
+                android:layout_marginStart="44dp"
+                android:fontFamily="@font/premedium"
+                android:text="선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다."
+                android:textColor="#525252"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+</ScrollView>
