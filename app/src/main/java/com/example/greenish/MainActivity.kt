@@ -8,6 +8,7 @@ class MainActivity : AppCompatActivity() {
     private val binding: ActivityMainBinding by lazy {
         ActivityMainBinding.inflate(layoutInflater)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         // 앱 초기 실행 시 홈화면으로 설정 -> calendar에서 home으로 변경 필요
         if (savedInstanceState == null) {
-            binding.navView.selectedItemId = R.id.navigation_calendar
+            binding.navView.selectedItemId = R.id.navigation_home
         }
     }
 
@@ -35,7 +36,11 @@ class MainActivity : AppCompatActivity() {
 //                    supportFragmentManager.beginTransaction().replace(R.id.main_container, MyPlantFragment()).commit()
 //                    true
 //                }
-//                R.id.fragment_settings -> {
+//                R.id.navigation_search -> {
+//                    supportFragmentManager.beginTransaction().replace(R.id.main_container, SearchFragment()).commit()
+//                    true
+//                }
+//                R.id.navigation_extra -> {
 //                    supportFragmentManager.beginTransaction().replace(R.id.main_container, SettingsFragment()).commit()
 //                    true
 //                }
