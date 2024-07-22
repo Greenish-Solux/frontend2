@@ -28,10 +28,10 @@ class MainActivity : AppCompatActivity() {
 //                    supportFragmentManager.beginTransaction().replace(R.id.main_container, HomeFragment()).commit()
 //                    true
 //                }
-//                R.id.navigation_calendar -> {
-//                    supportFragmentManager.beginTransaction().replace(R.id.main_container, CalendarFragment()).commit()
-//                    true
-//                }
+                R.id.navigation_calendar -> {
+                    supportFragmentManager.beginTransaction().replace(R.id.main_container, CalendarFragment()).commit()
+                    true
+                }
 //                R.id.navigation_diary -> {
 //                    supportFragmentManager.beginTransaction().replace(R.id.main_container, MyPlantFragment()).commit()
 //                    true
