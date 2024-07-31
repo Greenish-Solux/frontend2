@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -12,82 +11,880 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="49dp">
+            android:layout_height="379dp">
 
             <TextView
-                android:id="@+id/tv_search_result_page_text1"
-                android:layout_width="wrap_content"
-                android:layout_height="34dp"
-                android:layout_marginStart="31dp"
+                android:id="@+id/tv_search_result_page_title"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="49dp"
                 android:layout_marginTop="14dp"
                 android:fontFamily="@font/prebold"
-                android:text="'선인장'"
+                android:text="선인장"
                 android:textColor="#5AC479"
                 android:textSize="22sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/tv_search_result_page_text2"
-                android:layout_width="wrap_content"
-                android:layout_height="34dp"
-                android:layout_marginStart="101dp"
-                android:layout_marginTop="14dp"
-                android:fontFamily="@font/prebold"
-                android:text="이 무엇인가요?"
-                android:textColor="#525252"
-                android:textSize="22sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="330dp">
 
             <ImageView
                 android:id="@+id/iv_search_result_page_image"
                 android:layout_width="290dp"
                 android:layout_height="290dp"
                 android:layout_marginStart="49dp"
+                android:layout_marginTop="14dp"
                 android:src="@drawable/ic_search_result"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/tv_search_result_page_title" />
 
             <TextView
                 android:id="@+id/tv_search_result_page_text3"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:layout_marginStart="239dp"
-                android:layout_marginTop="296dp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/premedium"
                 android:gravity="center"
                 android:text="이미지 출처: 나무위키"
                 android:textColor="#D2D2D2"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
+                app:layout_constraintTop_toBottomOf="@id/iv_search_result_page_image" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="273dp">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_adviseInfo0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:text="조언 : "
+                    android:layout_marginStart="44dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
 
             <TextView
-                android:id="@+id/tv_search_result_page_text4"
-                android:layout_width="304dp"
-                android:layout_height="273dp"
-                android:layout_marginStart="44dp"
+                android:id="@+id/tv_search_result_page_adviseInfo"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/premedium"
-                android:text="선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다.선인장은 선인장입니다."
                 android:textColor="#525252"
                 android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_adviseInfo0"
+                app:layout_constraintTop_toTopOf="parent"
+                />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_clCodeNm0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:text="분류 : "
+                    android:layout_marginStart="44dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_clCodeNm"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_clCodeNm0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_dlthtsCodeNm0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:text="병충해 : "
+                    android:layout_marginStart="44dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_dlthtsCodeNm"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_dlthtsCodeNm0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_fmlCodeNm0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:text="과 : "
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="44dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_fmlCodeNm"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_fmlCodeNm0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_fmldecolrCodeNm0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:text="과일색 : "
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="44dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_fmldecolrCodeNm"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:layout_marginTop="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_fmldecolrCodeNm0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_fmldeSeasonCodeNm0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:layout_marginTop="8dp"
+                    android:textSize="12sp"
+                    android:text="과일 계절 : "
+                    android:layout_marginStart="44dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_fmldeSeasonCodeNm"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:layout_marginTop="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_fmldeSeasonCodeNm0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_fncltyInfo0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:text="기능성 : "
+                    android:layout_marginStart="44dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_fncltyInfo"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:layout_marginTop="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_fncltyInfo0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_frtlzrInfo0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:text="비료 : "
+                    android:layout_marginStart="44dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_frtlzrInfo"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:layout_marginTop="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_frtlzrInfo0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_growthAraInfo0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:text="성장 넓이 : "
+                    android:layout_marginStart="44dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_growthAraInfo"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_growthAraInfo0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_growthHgInfo0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:text="성장 높이 : "
+                    android:layout_marginStart="44dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_growthHgInfo"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_growthHgInfo0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_grwhstleCodeNm0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:text="생육형태 : "
+                    android:layout_marginStart="44dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_grwhstleCodeNm"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:layout_marginTop="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_grwhstleCodeNm0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_grwhTpCodeNm0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:text="생육온도 : "
+                    android:layout_marginStart="44dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_grwhTpCodeNm"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:layout_marginTop="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_grwhTpCodeNm0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_grwtveCodeNm0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:text="생장속도 : "
+                    android:layout_marginStart="44dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_grwtveCodeNm"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:layout_marginTop="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_grwtveCodeNm0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_hdCodeNm0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:text="습도 : "
+                    android:layout_marginStart="44dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_hdCodeNm"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:layout_marginTop="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_hdCodeNm0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_ignSeasonCodeNm0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:text="발화 계절 : "
+                    android:layout_marginStart="44dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_ignSeasonCodeNm"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:layout_marginTop="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_ignSeasonCodeNm0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_lefcolrCodeNm0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:text="잎색 : "
+                    android:layout_marginStart="44dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_lefcolrCodeNm"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:layout_marginTop="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_lefcolrCodeNm0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_lefmrkCodeNm0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:text="잎무늬 : "
+                    android:layout_marginStart="44dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_lefmrkCodeNm"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:layout_marginTop="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_lefmrkCodeNm0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_lefStleInfo0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:text="잎 형태 : "
+                    android:layout_marginStart="44dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_lefStleInfo"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:layout_marginTop="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_lefStleInfo0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_lighttdemanddoCodeNm0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:text="광요구도 : "
+                    android:layout_marginStart="44dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_lighttdemanddoCodeNm"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:layout_marginTop="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_lighttdemanddoCodeNm0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_managedemanddoCodeNm0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:text="관리요구도 : "
+                    android:layout_marginStart="44dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_managedemanddoCodeNm"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:layout_marginTop="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_managedemanddoCodeNm0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_managelevelCodeNm0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:text="관리수준 : "
+                    android:layout_marginStart="44dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_managelevelCodeNm"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:layout_marginTop="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_managelevelCodeNm0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_orgplceInfo0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:text="원산지 정보 : "
+                    android:layout_marginStart="44dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_orgplceInfo"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:layout_marginTop="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_orgplceInfo0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_plntbneNm0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:text="학명 : "
+                    android:layout_marginStart="44dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_plntbneNm"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:layout_marginTop="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_plntbneNm0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_plntzrNm0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+                    android:text="영명 : "
+                    android:layout_marginStart="44dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_search_result_page_plntzrNm"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/premedium"
+                    android:textColor="#525252"
+                    android:layout_marginTop="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search_result_page_plntzrNm0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"/>
+
+
+
+
+
+
+
+
+        </LinearLayout>
 
 
     </LinearLayout>

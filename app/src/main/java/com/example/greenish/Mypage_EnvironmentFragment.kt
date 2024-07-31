@@ -18,10 +18,6 @@ import androidx.fragment.app.Fragment
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import java.util.Locale
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.Body
-import retrofit2.http.POST
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
 
@@ -35,8 +31,6 @@ class Mypage_EnvironmentFragment : Fragment() {
     private lateinit var ivPlace: ImageView
     private lateinit var tvPlace: TextView
     private lateinit var fusedLocationClient: FusedLocationProviderClient
-
-    private lateinit var apiService: ApiService
 
     companion object {
         private const val LOCATION_PERMISSION_REQUEST_CODE = 1000
@@ -91,24 +85,15 @@ class Mypage_EnvironmentFragment : Fragment() {
             }
         }
 
-        // Initialize Retrofit
-        val retrofit = Retrofit.Builder()
-            .baseUrl("https://your-api-base-url.com/")  // TODO: 실제 API 기본 URL로 변경해주세요
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-
-        apiService = retrofit.create(ApiService::class.java)
-
         return view
     }
 
     private fun sendLocationToBackend(latitude: Double, longitude: Double, address: String) {
         val locationData = LocationData(latitude, longitude, address)
 
-        // 코루틴 스코프 내에서 API 호출
         lifecycleScope.launch {
             try {
-                val response = apiService.sendLocation(locationData)
+                val response = RetrofitClient.apiService.sendLocation(locationData)
                 if (response.isSuccessful) {
                     Toast.makeText(requireContext(), "위치 정보가 성공적으로 전송되었습니다.", Toast.LENGTH_SHORT).show()
                 } else {
@@ -217,13 +202,3 @@ class Mypage_EnvironmentFragment : Fragment() {
     }
 }
 
-data class LocationData(
-    val latitude: Double,
-    val longitude: Double,
-    val address: String
-)
-
-interface ApiService {
-    @POST("location")  // 실제 엔드포인트로 변경해주세요
-    suspend fun sendLocation(@Body locationData: LocationData): retrofit2.Response<Unit>
-}

@@ -1,0 +1,30 @@
+package com.example.greenish
+
+data class PlantDetails(
+    val adviseInfo: String,
+    val clCodeNm: String,
+    val distbNm: String,
+    val dlthtsCodeNm: String,
+    val fmlCodeNm: String,
+    val fmldecolrCodeNm: String,
+    val fmldeSeasonCodeNm: String,
+    val fncltyInfo: String,
+    val frtlzrInfo: String,
+    val growthAraInfo: String,
+    val growthHgInfo: String,
+    val grwhstleCodeNm: String,
+    val grwhTpCodeNm: String,
+    val grwtveCodeNm: String,
+    val hdCodeNm: String,
+    val ignSeasonCodeNm: String,
+    val lefcolrCodeNm: String,
+    val lefmrkCodeNm: String,
+    val lefStleInfo: String,
+    val lighttdemanddoCodeNm: String,
+    val managedemanddoCodeNm: String,
+    val managelevelCodeNm: String,
+    val orgplceInfo: String,
+    val plntbneNm: String,
+    val plntzrNm: String,
+    val rtnFileUrl: String
+)
