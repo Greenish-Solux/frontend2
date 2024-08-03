@@ -32,7 +32,7 @@ class Mypage_EnvironmentFragment : Fragment() {
     private lateinit var ivPlace: ImageView
     private lateinit var tvPlace: TextView
     private lateinit var fusedLocationClient: FusedLocationProviderClient
-    private val token = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjBAZ21haWwuY29tIiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTcyMjY5OTI4MywiZXhwIjoxNzIyNzAyODgzfQ.BIZB_wiEie8XjHc8PKXOx2FVor2pVoVkwSV_MUpLje8"
+    private val token = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImdyZWVuQGdtYWlsLmNvbSIsInJvbGUiOiJST0xFX1VTRVIiLCJpYXQiOjE3MjI3MDk5NDksImV4cCI6MTcyMjcxMzU0OX0.M4otbCF5e55aRCejeXxvx-J4KABkMf7_jvpG9cw1LCI"
 
     companion object {
         private const val LOCATION_PERMISSION_REQUEST_CODE = 1000

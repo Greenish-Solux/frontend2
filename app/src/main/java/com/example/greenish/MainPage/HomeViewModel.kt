@@ -22,7 +22,7 @@ class HomeViewModel : ViewModel() {
 
     private fun fetchWeatherData() {
         viewModelScope.launch {
-            weatherApiService.getWeatherForecast("Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjBAZ21haWwuY29tIiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTcyMjY5OTI4MywiZXhwIjoxNzIyNzAyODgzfQ.BIZB_wiEie8XjHc8PKXOx2FVor2pVoVkwSV_MUpLje8")
+            weatherApiService.getWeatherForecast("Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImdyZWVuQGdtYWlsLmNvbSIsInJvbGUiOiJST0xFX1VTRVIiLCJpYXQiOjE3MjI3MDk5NDksImV4cCI6MTcyMjcxMzU0OX0.M4otbCF5e55aRCejeXxvx-J4KABkMf7_jvpG9cw1LCI")
                 .enqueue(object : Callback<List<TemperatureResponse>> {
                     override fun onResponse(
                         call: Call<List<TemperatureResponse>>,
