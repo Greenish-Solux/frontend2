@@ -2,7 +2,10 @@ package com.example.greenish
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.greenish.SearchpageANDMypage.MypageFragment
+import com.example.greenish.SearchpageANDMypage.SearchFragment
 import com.example.greenish.databinding.ActivityMainBinding
+import com.example.greenish.ui.home.HomeFragment
 
 class MainActivity : AppCompatActivity() {
     private val binding: ActivityMainBinding by lazy {
@@ -24,10 +27,10 @@ class MainActivity : AppCompatActivity() {
     fun setBottomNavigationView() {
         binding.navView.setOnItemSelectedListener { item ->
             when (item.itemId) {
-//                R.id.navigation_home -> {
-//                    supportFragmentManager.beginTransaction().replace(R.id.main_container, HomeFragment()).commit()
-//                    true
-//                }
+                R.id.navigation_home -> {
+                    supportFragmentManager.beginTransaction().replace(R.id.main_container, HomeFragment()).commit()
+                    true
+                }
                 R.id.navigation_calendar -> {
                     supportFragmentManager.beginTransaction().replace(R.id.main_container, CalendarFragment()).commit()
                     true
