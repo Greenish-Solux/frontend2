@@ -2,554 +2,928 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SearchFragment"
-    tools:ignore="ExtraText">
+    android:padding="16dp">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="MissingConstraints">
-
-        <ImageView
-            android:id="@+id/iv_search_filter_box"
-            android:layout_width="390dp"
-            android:layout_height="543dp"
-            android:src="@drawable/bg_r10_white_fill"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout1"
-                android:layout_width="match_parent"
-                android:layout_height="61dp"
-                tools:ignore="MissingConstraints">
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="210dp"
+                android:fontFamily="@font/prebold"
+                android:text="식집사 검색 필터"
+                android:textSize="19sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/tv_search_filter_text1"
-                    android:layout_width="226dp"
-                    android:layout_height="34dp"
-                    android:fontFamily="@font/prebold"
-                    android:gravity="center_vertical|start"
-                    android:text="식집사 검색필터"
-                    android:textColor="#525252"
-                    android:textSize="20sp"
-                    android:layout_marginStart="31dp"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="341dp"
-                    android:layout_marginTop="21dp"
-                    android:src="@drawable/frame_1042"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout2"
-                android:layout_width="match_parent"
-                android:layout_height="76dp"
-                tools:ignore="MissingConstraints">
-
-                <TextView
-                    android:id="@+id/tv_search_filter_text2"
-                    android:layout_width="226dp"
-                    android:layout_height="34dp"
-                    android:fontFamily="@font/premedium"
-                    android:gravity="center_vertical|start"
-                    android:text="식집사 레벨"
-                    android:textColor="#C2C3C7"
-                    android:textSize="15sp"
-                    android:layout_marginStart="32dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-                <ImageView
-                    android:layout_width="83dp"
-                    android:layout_height="36dp"
-                    android:layout_marginStart="31dp"
-                    android:layout_marginTop="32dp"
-                    android:src="@drawable/bg_r100_gray_line"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:layout_width="71.5dp"
-                    android:layout_height="36dp"
-                    android:fontFamily="@font/premedium"
-                    android:gravity="center"
-                    android:text="초보자"
-                    android:textColor="#525252"
-                    android:textSize="14sp"
-                    android:layout_marginStart="36dp"
-                    android:layout_marginTop="32dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-                <ImageView
-                    android:layout_width="83dp"
-                    android:layout_height="36dp"
-                    android:layout_marginStart="123dp"
-                    android:layout_marginTop="32dp"
-                    android:src="@drawable/bg_r100_gray_line"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:layout_width="71.5dp"
-                    android:layout_height="36dp"
-                    android:fontFamily="@font/premedium"
-                    android:gravity="center"
-                    android:text="경험자"
-                    android:textColor="#525252"
-                    android:textSize="14sp"
-                    android:layout_marginStart="128dp"
-                    android:layout_marginTop="32dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-                <ImageView
-                    android:layout_width="83dp"
-                    android:layout_height="36dp"
-                    android:layout_marginStart="220dp"
-                    android:layout_marginTop="32dp"
-                    android:src="@drawable/bg_r100_gray_line"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:layout_width="71.5dp"
-                    android:layout_height="36dp"
-                    android:fontFamily="@font/premedium"
-                    android:gravity="center"
-                    android:text="전문가"
-                    android:textColor="#525252"
-                    android:textSize="14sp"
-                    android:layout_marginStart="225dp"
-                    android:layout_marginTop="32dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout3"
-                android:layout_width="match_parent"
-                android:layout_height="76dp"
-                tools:ignore="MissingConstraints">
-
-                <TextView
-                    android:id="@+id/tv_search_filter_text3"
-                    android:layout_width="226dp"
-                    android:layout_height="34dp"
-                    android:fontFamily="@font/premedium"
-                    android:gravity="center_vertical|start"
-                    android:text="꽃 색상"
-                    android:textColor="#C2C3C7"
-                    android:textSize="15sp"
-                    android:layout_marginStart="32dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-                <ImageView
-                    android:layout_width="83dp"
-                    android:layout_height="36dp"
-                    android:layout_marginStart="31dp"
-                    android:layout_marginTop="32dp"
-                    android:src="@drawable/bg_r100_gray_line"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:layout_width="71.5dp"
-                    android:layout_height="36dp"
-                    android:fontFamily="@font/premedium"
-                    android:gravity="center"
-                    android:text="분홍색"
-                    android:textColor="#525252"
-                    android:textSize="14sp"
-                    android:layout_marginStart="36dp"
-                    android:layout_marginTop="32dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-                <ImageView
-                    android:layout_width="83dp"
-                    android:layout_height="36dp"
-                    android:layout_marginStart="123dp"
-                    android:layout_marginTop="32dp"
-                    android:src="@drawable/bg_r100_gray_line"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:layout_width="71.5dp"
-                    android:layout_height="36dp"
-                    android:fontFamily="@font/premedium"
-                    android:gravity="center"
-                    android:text="흰색"
-                    android:textColor="#525252"
-                    android:textSize="14sp"
-                    android:layout_marginStart="128dp"
-                    android:layout_marginTop="32dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout4"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                tools:ignore="MissingConstraints">
-
-                <TextView
-                    android:id="@+id/tv_search_filter_text4"
-                    android:layout_width="226dp"
-                    android:layout_height="34dp"
-                    android:fontFamily="@font/premedium"
-                    android:gravity="center_vertical|start"
-                    android:text="온도"
-                    android:textColor="#C2C3C7"
-                    android:textSize="15sp"
-                    android:layout_marginStart="32dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-                <ImageView
-                    android:id="@+id/iv_search_filter_line1"
-                    android:layout_width="324dp"
-                    android:layout_height="9dp"
-                    android:layout_marginStart="31dp"
-                    android:layout_marginTop="35dp"
-                    android:src="@drawable/ic_search_filter_line1"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:layout_width="75dp"
-                    android:layout_height="9dp"
-                    android:layout_marginStart="39dp"
-                    android:layout_marginTop="35dp"
-                    android:src="@drawable/line_170"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/iv_search_filter_circle1"
-                    android:layout_width="13dp"
-                    android:layout_height="13dp"
-                    android:layout_marginStart="110dp"
-                    android:layout_marginTop="33dp"
-                    android:src="@drawable/iv_search_filter_circle"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:layout_width="23dp"
-                    android:layout_height="36dp"
-                    android:fontFamily="@font/premedium"
-                    android:gravity="center"
-                    android:text="16°C"
-                    android:textColor="#C2C3C7"
-                    android:textSize="10sp"
-                    android:layout_marginStart="31dp"
-                    android:layout_marginTop="37dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:fontFamily="@font/premedium"
-                    android:gravity="center"
-                    android:text="17°C"
-                    android:textColor="#5AC479"
-                    android:textSize="13sp"
-                    android:layout_marginStart="104dp"
-                    android:layout_marginTop="37dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-                <TextView
-                    android:layout_width="23dp"
-                    android:layout_height="36dp"
-                    android:fontFamily="@font/premedium"
-                    android:gravity="center"
-                    android:text="18°C"
-                    android:textColor="#C2C3C7"
-                    android:textSize="10sp"
-                    android:layout_marginStart="183dp"
-                    android:layout_marginTop="37dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-                <TextView
-                    android:layout_width="23dp"
-                    android:layout_height="36dp"
-                    android:fontFamily="@font/premedium"
-                    android:gravity="center"
-                    android:text="19°C"
-                    android:textColor="#C2C3C7"
-                    android:textSize="10sp"
-                    android:layout_marginStart="265dp"
-                    android:layout_marginTop="37dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:fontFamily="@font/premedium"
-                    android:gravity="center"
-                    android:text="20°C"
-                    android:textColor="#C2C3C7"
-                    android:textSize="10sp"
-                    android:layout_marginStart="340dp"
-                    android:layout_marginTop="37dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout5"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                tools:ignore="MissingConstraints">
-
-                <TextView
-                    android:id="@+id/tv_search_filter_text5"
-                    android:layout_width="226dp"
-                    android:layout_height="34dp"
-                    android:fontFamily="@font/premedium"
-                    android:gravity="center_vertical|start"
-                    android:text="습도"
-                    android:textColor="#C2C3C7"
-                    android:textSize="15sp"
-                    android:layout_marginStart="32dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-                <ImageView
-                    android:id="@+id/iv_search_filter_line2"
-                    android:layout_width="324dp"
-                    android:layout_height="9dp"
-                    android:layout_marginStart="31dp"
-                    android:layout_marginTop="35dp"
-                    android:src="@drawable/ic_search_filter_line1"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:layout_width="114dp"
-                    android:layout_height="9dp"
-                    android:layout_marginStart="39dp"
-                    android:layout_marginTop="35dp"
-                    android:src="@drawable/line_172"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/iv_search_filter_circle2"
-                    android:layout_width="13dp"
-                    android:layout_height="13dp"
-                    android:layout_marginStart="146dp"
-                    android:layout_marginTop="33dp"
-                    android:src="@drawable/iv_search_filter_circle"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:layout_width="23dp"
-                    android:layout_height="36dp"
-                    android:fontFamily="@font/premedium"
-                    android:gravity="center"
-                    android:text="40%"
-                    android:textColor="#C2C3C7"
-                    android:textSize="10sp"
-                    android:layout_marginStart="31dp"
-                    android:layout_marginTop="37dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:fontFamily="@font/premedium"
-                    android:gravity="center"
-                    android:text="70%"
-                    android:textColor="#C2C3C7"
-                    android:textSize="10sp"
-                    android:layout_marginStart="340dp"
-                    android:layout_marginTop="37dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout6"
-                android:layout_width="match_parent"
-                android:layout_height="89dp"
-                tools:ignore="MissingConstraints">
-
-                <TextView
-                    android:id="@+id/tv_search_filter_text6"
-                    android:layout_width="226dp"
-                    android:layout_height="34dp"
-                    android:fontFamily="@font/premedium"
-                    android:gravity="center_vertical|start"
-                    android:text="배치 장소"
-                    android:textColor="#C2C3C7"
-                    android:textSize="15sp"
-                    android:layout_marginStart="32dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-                <ImageView
-                    android:layout_width="83dp"
-                    android:layout_height="36dp"
-                    android:layout_marginStart="31dp"
-                    android:layout_marginTop="32dp"
-                    android:src="@drawable/bg_r100_gray_line"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:layout_width="71.5dp"
-                    android:layout_height="36dp"
-                    android:fontFamily="@font/premedium"
-                    android:gravity="center"
-                    android:text="거실"
-                    android:textColor="#525252"
-                    android:textSize="14sp"
-                    android:layout_marginStart="36dp"
-                    android:layout_marginTop="32dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-                <ImageView
-                    android:layout_width="83dp"
-                    android:layout_height="36dp"
-                    android:layout_marginStart="123dp"
-                    android:layout_marginTop="32dp"
-                    android:src="@drawable/bg_r100_gray_line"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:layout_width="71.5dp"
-                    android:layout_height="36dp"
-                    android:fontFamily="@font/premedium"
-                    android:gravity="center"
-                    android:text="발코니"
-                    android:textColor="#525252"
-                    android:textSize="14sp"
-                    android:layout_marginStart="128dp"
-                    android:layout_marginTop="32dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-                <ImageView
-                    android:layout_width="83dp"
-                    android:layout_height="36dp"
-                    android:layout_marginStart="220dp"
-                    android:layout_marginTop="32dp"
-                    android:src="@drawable/bg_r100_gray_line"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:layout_width="71.5dp"
-                    android:layout_height="36dp"
-                    android:fontFamily="@font/premedium"
-                    android:gravity="center"
-                    android:text="방"
-                    android:textColor="#525252"
-                    android:textSize="14sp"
-                    android:layout_marginStart="225dp"
-                    android:layout_marginTop="32dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout7"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:ignore="MissingConstraints">
-
-                <ImageView
-                    android:id="@+id/iv_search_filter_ok"
-                    android:layout_width="216dp"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="87dp"
-                    android:src="@drawable/bg_r10_green_fill"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_search_filter_ok"
-                    android:layout_width="186dp"
-                    android:layout_height="31dp"
-                    android:fontFamily="@font/premedium"
-                    android:gravity="center"
-                    android:text="적용하기"
-                    android:textColor="#FFFFFF"
-                    android:textSize="19sp"
-                    android:layout_marginStart="102dp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageButton
+                android:id="@+id/ib_filter_closebutton"
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:layout_gravity="center"
+                android:background="@drawable/image_button_selector"
+                android:scaleType="centerCrop"
+                android:src="@drawable/back"
+                tools:ignore="SpeakableTextPresentCheck"/>
 
         </LinearLayout>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/line" />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="580dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@id/applyButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/prebold"
+                android:paddingTop="20dp"
+                android:paddingBottom="8dp"
+                android:text="키우기 단계"
+                android:textSize="15sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <SeekBar
+                    android:id="@+id/sb_filter_managedemanddoCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:max="100"
+                    android:progress="50"
+                    android:thumbTint="@color/Greenish_green"
+                    android:progressTint="@color/Greenish_green"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_filter_managedemanddoCode_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/prebold"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="8dp"
+                    android:text="초보자"
+                    android:textSize="12sp"
+                    android:textColor="@color/Greenish_darkgrey"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_filter_managedemanddoCode_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/prebold"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="8dp"
+                    android:text="초중급자"
+                    android:textSize="14sp"
+                    android:textColor="@color/Greenish_green"
+                    android:layout_marginStart="165dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_filter_managedemanddoCode_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/prebold"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="8dp"
+                    android:text="경험자(고급자)"
+                    android:textSize="12sp"
+                    android:textColor="@color/Greenish_darkgrey"
+                    android:layout_marginStart="300dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/prebold"
+                android:paddingTop="20dp"
+                android:paddingBottom="8dp"
+                android:text="꽃 색상"
+                android:textSize="15sp" />
+
+            <HorizontalScrollView
+                android:id="@+id/hsv_filter_flclrCodeNm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- 색상 항목 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageButton
+                            android:id="@+id/ib_filter_flclrCodeNm_red"
+                            android:layout_width="82px"
+                            android:layout_height="82px"
+                            android:background="@drawable/image_button_selector"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/red" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="빨강"
+                            android:textSize="10sp"
+                            android:textColor="@color/Greenish_black"/>
+                    </LinearLayout>
+
+                    <!-- 색상 항목 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageButton
+                            android:id="@+id/ib_filter_flclrCodeNm_orange"
+                            android:layout_width="82px"
+                            android:layout_height="82px"
+                            android:background="@drawable/image_button_selector"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/orange" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="주황"
+                            android:textSize="10sp"
+                            android:textColor="@color/Greenish_black"/>
+                    </LinearLayout>
+
+                    <!-- 색상 항목 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageButton
+                            android:id="@+id/ib_filter_flclrCodeNm_yellow"
+                            android:layout_width="82px"
+                            android:layout_height="82px"
+                            android:background="@drawable/image_button_selector"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/yellow" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="노랑"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <!-- 색상 항목 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageButton
+                            android:id="@+id/ib_filter_flclrCodeNm_pink"
+                            android:layout_width="82px"
+                            android:layout_height="82px"
+                            android:background="@drawable/image_button_selector"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/pink"
+                            tools:ignore="SpeakableTextPresentCheck"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="분홍"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <!-- 색상 항목 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageButton
+                            android:id="@+id/ib_filter_flclrCodeNm_purple"
+                            android:layout_width="82px"
+                            android:layout_height="82px"
+                            android:background="@drawable/image_button_selector"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/puple"
+                            tools:ignore="SpeakableTextPresentCheck"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="보라"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <!-- 색상 항목 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageButton
+                            android:id="@+id/ib_filter_flclrCodeNm_blue"
+                            android:layout_width="82px"
+                            android:layout_height="82px"
+                            android:background="@drawable/image_button_selector"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/blue"
+                            tools:ignore="SpeakableTextPresentCheck"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="파랑"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <!-- 색상 항목 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageButton
+                            android:id="@+id/ib_filter_flclrCodeNm_white"
+                            android:layout_width="82px"
+                            android:layout_height="82px"
+                            android:background="@drawable/image_button_selector"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/white"
+                            tools:ignore="SpeakableTextPresentCheck"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="하양"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <!-- 색상 항목 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageButton
+                            android:id="@+id/ib_filter_flclrCodeNm_mix"
+                            android:layout_width="82px"
+                            android:layout_height="82px"
+                            android:background="@drawable/image_button_selector"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/mix"
+                            tools:ignore="SpeakableTextPresentCheck"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="혼합"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageButton
+                            android:id="@+id/ib_filter_flclrCodeNm_etc"
+                            android:layout_width="82px"
+                            android:layout_height="82px"
+                            android:background="@drawable/image_button_selector"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/something"
+                            tools:ignore="SpeakableTextPresentCheck"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="기타"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/prebold"
+                android:paddingTop="20dp"
+                android:paddingBottom="8dp"
+                android:text="잎 무늬"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 색상 항목 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageButton
+                        android:id="@+id/ib_filter_lefmrkCodeNm_stripe"
+                        android:layout_width="82px"
+                        android:layout_height="82px"
+                        android:background="@drawable/image_button_selector"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/stripe"
+                        tools:ignore="SpeakableTextPresentCheck"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="줄무늬"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <!-- 색상 항목 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageButton
+                        android:id="@+id/ib_filter_lefmrkCodeNm_dot"
+                        android:layout_width="82px"
+                        android:layout_height="82px"
+                        android:background="@drawable/image_button_selector"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/dot"
+                        tools:ignore="SpeakableTextPresentCheck"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="점 무늬"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <!-- 색상 항목 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageButton
+                        android:id="@+id/ib_filter_lefmrkCodeNm_reap"
+                        android:layout_width="82px"
+                        android:layout_height="82px"
+                        android:background="@drawable/image_button_selector"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/reap"
+                        tools:ignore="SpeakableTextPresentCheck"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="잎 가장자리"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <!-- 색상 항목 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageButton
+                        android:id="@+id/ib_filter_lefmrkCodeNm_etc"
+                        android:layout_width="82px"
+                        android:layout_height="82px"
+                        android:background="@drawable/image_button_selector"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/something"
+                        tools:ignore="SpeakableTextPresentCheck"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="기타"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--            꽃 피는 계절-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/prebold"
+                android:paddingTop="20dp"
+                android:paddingBottom="8dp"
+                android:text="꽃 피는 계절"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.widget.Button
+                    android:id="@+id/ib_filter_ignSeasonCodeNm_spring"
+                    style="@style/CustomButton"
+                    android:layout_width="50dp"
+                    android:layout_height="38dp"
+                    android:layout_marginRight="10dp"
+                    android:text="봄" />
+
+                <android.widget.Button
+                    android:id="@+id/ib_filter_ignSeasonCodeNm_summer"
+                    style="@style/CustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginRight="10dp"
+                    android:text="여름" />
+
+                <android.widget.Button
+                    android:id="@+id/ib_filter_ignSeasonCodeNm_fall"
+                    style="@style/CustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginRight="10dp"
+                    android:text="가을" />
+
+                <android.widget.Button
+                    android:id="@+id/ib_filter_ignSeasonCodeNm_winter"
+                    style="@style/CustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginRight="10dp"
+                    android:text="겨울" />
+
+            </LinearLayout>
+
+            <!--            배치 광도-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/prebold"
+                android:paddingTop="20dp"
+                android:paddingBottom="8dp"
+                android:text="배치 장소"
+                android:textSize="15sp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.widget.Button
+                        android:id="@+id/ib_filter_lighttdemanddoCodeNm_office"
+                        style="@style/CustomButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginRight="10dp"
+                        android:text="사무실 책상" />
+
+                    <android.widget.Button
+                        android:id="@+id/ib_filter_lighttdemanddoCodeNm_veranda"
+                        style="@style/CustomButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginRight="10dp"
+                        android:text="베란다" />
+
+                    <android.widget.Button
+                        android:id="@+id/ib_filter_lighttdemanddoCodeNm_bathroom"
+                        style="@style/CustomButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginRight="10dp"
+                        android:text="욕실" />
+
+                    <android.widget.Button
+                        android:id="@+id/ib_filter_lighttdemanddoCodeNm_brightoffice"
+                        style="@style/CustomButton"
+                        android:layout_width="100dp"
+                        android:layout_height="38dp"
+                        android:layout_marginRight="10dp"
+                        android:text="밝은 사무실" />
+
+                    <android.widget.Button
+                        android:id="@+id/ib_filter_lighttdemanddoCodeNm_terrace"
+                        style="@style/CustomButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginRight="10dp"
+                        android:text="테라스" />
+
+                    <android.widget.Button
+                        android:id="@+id/ib_filter_lighttdemanddoCodeNm_garden"
+                        style="@style/CustomButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginRight="10dp"
+                        android:text="정원" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/prebold"
+                android:paddingTop="20dp"
+                android:paddingBottom="8dp"
+                android:text="생육 형태"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/ib_filter_grwhstleCodeNm_type1"
+                    android:layout_width="140px"
+                    android:layout_height="207px"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/image_button_selector"
+                    android:padding="0sp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/type1"
+                    tools:ignore="SpeakableTextPresentCheck"/>
+
+                <ImageButton
+                    android:id="@+id/ib_filter_grwhstleCodeNm_type2"
+                    android:layout_width="140px"
+                    android:layout_height="207px"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/image_button_selector"
+                    android:padding="0sp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/type2"
+                    tools:ignore="SpeakableTextPresentCheck"/>
+
+                <ImageButton
+                    android:id="@+id/ib_filter_grwhstleCodeNm_type3"
+                    android:layout_width="140px"
+                    android:layout_height="207px"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/image_button_selector"
+                    android:padding="0sp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/type3"
+                    tools:ignore="SpeakableTextPresentCheck"/>
+
+                <ImageButton
+                    android:id="@+id/ib_filter_grwhstleCodeNm_type4"
+                    android:layout_width="140px"
+                    android:layout_height="207px"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/image_button_selector"
+                    android:padding="0sp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/type4"
+                    tools:ignore="SpeakableTextPresentCheck"/>
+
+                <ImageButton
+                    android:id="@+id/ib_filter_grwhstleCodeNm_type5"
+                    android:layout_width="140px"
+                    android:layout_height="207px"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/image_button_selector"
+                    android:padding="0sp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/type5"
+                    tools:ignore="SpeakableTextPresentCheck"/>
+
+                <ImageButton
+                    android:id="@+id/ib_filter_grwhstleCodeNm_type6"
+                    android:layout_width="140px"
+                    android:layout_height="207px"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/image_button_selector"
+                    android:padding="0sp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/type6"
+                    tools:ignore="SpeakableTextPresentCheck"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/prebold"
+                android:paddingTop="20dp"
+                android:paddingBottom="8dp"
+                android:text="열매 유무"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.widget.Button
+                    android:id="@+id/ib_filter_fruit_true"
+                    style="@style/CustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginRight="10dp"
+                    android:text="열매 O" />
+
+                <android.widget.Button
+                    android:id="@+id/ib_filter_fruit_false"
+                    style="@style/CustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginRight="10dp"
+                    android:text="열매 X" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/prebold"
+                android:paddingTop="20dp"
+                android:paddingBottom="8dp"
+                android:text="최저 온도"
+                android:textSize="15sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <SeekBar
+                    android:id="@+id/sb_filter_winterLwetTpCodeNm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:max="100"
+                    android:progress="100"
+                    android:thumbTint="@color/Greenish_green"
+                    android:progressTint="@color/Greenish_green"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_filter_winterLwetTpCodeNm_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/prebold"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="8dp"
+                    android:text="0°C 이하"
+                    android:textSize="12sp"
+                    android:textColor="@color/Greenish_darkgrey"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_filter_winterLwetTpCodeNm_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/prebold"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="8dp"
+                    android:text="5°C"
+                    android:textSize="12sp"
+                    android:textColor="@color/Greenish_darkgrey"
+                    android:layout_marginStart="90dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_filter_winterLwetTpCodeNm_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/prebold"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="8dp"
+                    android:text="7°C"
+                    android:textSize="14sp"
+                    android:textColor="@color/Greenish_green"
+                    android:layout_marginStart="180dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_filter_winterLwetTpCodeNm_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/prebold"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="8dp"
+                    android:text="10°C"
+                    android:textSize="12sp"
+                    android:textColor="@color/Greenish_darkgrey"
+                    android:layout_marginStart="260dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_filter_winterLwetTpCodeNm_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/prebold"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="8dp"
+                    android:text="13°C 이상"
+                    android:textSize="12sp"
+                    android:textColor="@color/Greenish_darkgrey"
+                    android:layout_marginStart="320dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:layout_width="932px"
+                    android:layout_height="210px"
+                    android:src="@drawable/box" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="0dp">
+
+                    <ImageView
+                        android:layout_width="43px"
+                        android:layout_height="43px"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/infom" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/premedium"
+                        android:gravity="left"
+                        android:lineSpacingExtra="8dp"
+                        android:text="낮은 광도 (300~800 Lux) 공간: 창문에서 멀리 떨어진 거실, 사무실 책상, 욕실\n중간 광도 (800~1,500 Lux) 공간: 창문에서 가까운 거실, 베란다, 밝은 사무실\n높은 광도 (1,500~10,000 Lux) 공간: 햇빛이 잘 드는 창가, 베란다, 테라스, 정원"
+                        android:textColor="#989898"
+                        android:textSize="9sp" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/applyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="16dp">
+
+        <android.widget.Button
+            android:layout_width="400px"
+            android:layout_height="132px"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/bg_r10_green_line"
+            android:text="선택 초기화"
+            android:textColor="#5AC479"
+            android:textStyle="bold" />
+
+        <android.widget.Button
+            android:id="@+id/wb_filter_apply"
+            android:layout_width="507px"
+            android:layout_height="132px"
+            android:background="@drawable/bg_r10_green_fill"
+            android:text="적용하기"
+            android:textColor="@color/Greenish_white"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
 
 
 </LinearLayout>

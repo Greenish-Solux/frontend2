@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-parcelize")
+    id("kotlin-kapt")
 }
 
 android {
@@ -41,6 +43,9 @@ android {
 
 dependencies {
 
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
+
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("androidx.activity:activity-ktx:1.2.0")
@@ -56,4 +61,9 @@ dependencies {
     implementation ("androidx.navigation:navigation-fragment-ktx:2.4.0")
     implementation ("androidx.navigation:navigation-ui-ktx:2.4.0")
     implementation("com.github.prolificinteractive:material-calendarview:1.4.3")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
+    implementation("com.google.android.gms:play-services-location:21.3.0")
+    implementation("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
+    implementation("com.google.android.gms:play-services-appsearch:16.0.0")
 }

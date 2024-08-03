@@ -1,5 +1,6 @@
 package com.example.greenish
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -8,78 +9,136 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
+import com.example.greenish.StartPage.StartActivity
+import kotlinx.coroutines.launch
+import retrofit2.HttpException
 
 class Mypage_SettingFragment : Fragment() {
+
+    private lateinit var toggle1: ImageView
+    private lateinit var toggle2: ImageView
+    private lateinit var toggle3: ImageView
+    private lateinit var toggle4: ImageView
 
     private var isToggle1On = false
     private var isToggle2On = false
     private var isToggle3On = false
     private var isToggle4On = false
-    private var isToggle5On = false
-    private var isToggle6On = false
+
+    private val token =
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjBAZ21haWwuY29tIiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTcyMjY5OTI4MywiZXhwIjoxNzIyNzAyODgzfQ.BIZB_wiEie8XjHc8PKXOx2FVor2pVoVkwSV_MUpLje8"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_mypage_setting, container, false)
 
-        // Find ImageView by ID
-        val toggle1: ImageView = view.findViewById(R.id.iv_setting_toggle1)
-        val toggle2: ImageView = view.findViewById(R.id.iv_setting_toggle2)
-        val toggle3: ImageView = view.findViewById(R.id.iv_setting_toggle3)
-        val toggle4: ImageView = view.findViewById(R.id.iv_setting_toggle4)
-        val toggle5: ImageView = view.findViewById(R.id.iv_setting_toggle5)
-        val toggle6: ImageView = view.findViewById(R.id.iv_setting_toggle6)
+        toggle1 = view.findViewById(R.id.iv_setting_toggle1)
+        toggle2 = view.findViewById(R.id.iv_setting_toggle2)
+        toggle3 = view.findViewById(R.id.iv_setting_toggle3)
+        toggle4 = view.findViewById(R.id.iv_setting_toggle4)
 
-        // Toggle functionality for toggle1
-        toggle1.setOnClickListener {
-            isToggle1On = !isToggle1On
-            isToggle2On = isToggle1On
-            isToggle3On = isToggle1On
-            setToggleImages(toggle1, isToggle1On)
-            setToggleImages(toggle2, isToggle1On)
-            setToggleImages(toggle3, isToggle1On)
+        setupToggleListeners()
+        setupLogoutAndDeleteListeners(view)
+
+        fetchAlarmSettings()
+
+        return view
+    }
+
+    private fun setupToggleListeners() {
+        toggle1.setOnClickListener { updateToggle(0) }
+        toggle2.setOnClickListener { updateToggle(1) }
+        toggle3.setOnClickListener { updateToggle(2) }
+        toggle4.setOnClickListener { updateToggle(3) }
+    }
+
+    private fun updateToggle(index: Int) {
+        when (index) {
+            0 -> {
+                isToggle1On = !isToggle1On
+                isToggle2On = isToggle1On
+                isToggle3On = isToggle1On
+                isToggle4On = isToggle1On
+                setToggleImages(toggle1, isToggle1On)
+                setToggleImages(toggle2, isToggle2On)
+                setToggleImages(toggle3, isToggle3On)
+                setToggleImages(toggle4, isToggle4On)
+            }
+            1 -> {
+                isToggle2On = !isToggle2On
+                setToggleImages(toggle2, isToggle2On)
+            }
+            2 -> {
+                isToggle3On = !isToggle3On
+                setToggleImages(toggle3, isToggle3On)
+            }
+            3 -> {
+                isToggle4On = !isToggle4On
+                setToggleImages(toggle4, isToggle4On)
+            }
         }
+        updateAlarmSettings()
+    }
 
-        // Toggle functionality for toggle4
-        toggle4.setOnClickListener {
-            isToggle4On = !isToggle4On
-            isToggle5On = isToggle4On
-            isToggle6On = isToggle4On
-            setToggleImages(toggle4, isToggle4On)
-            setToggleImages(toggle5, isToggle4On)
-            setToggleImages(toggle6, isToggle4On)
+    private fun setToggleImages(imageView: ImageView, isOn: Boolean) {
+        imageView.setImageResource(if (isOn) R.drawable.ic_setting_on else R.drawable.ic_setting_off)
+    }
+
+    private fun fetchAlarmSettings() {
+        lifecycleScope.launch {
+            try {
+                val response = RetrofitClient.apiService.getAlarmSettings(token)
+                if (response.isSuccessful) {
+                    response.body()?.let { settings ->
+                        isToggle1On = settings.all
+                        isToggle2On = settings.hapticMode
+                        isToggle3On = settings.preview
+                        isToggle4On = settings.allPlantWatering
+                        updateToggleUI()
+                    }
+                } else {
+                    Toast.makeText(requireContext(), "Failed to fetch alarm settings", Toast.LENGTH_SHORT).show()
+                }
+            } catch (e: HttpException) {
+                Toast.makeText(requireContext(), "Network error", Toast.LENGTH_SHORT).show()
+            } catch (e: Exception) {
+                Toast.makeText(requireContext(), "An error occurred", Toast.LENGTH_SHORT).show()
+            }
         }
+    }
 
-        // Individual toggle functionality for toggle2
-        toggle2.setOnClickListener {
-            isToggle2On = !isToggle2On
-            setToggleImages(toggle2, isToggle2On)
+    private fun updateAlarmSettings() {
+        lifecycleScope.launch {
+            try {
+                val settings =
+                    ApiService.AlarmSettings(isToggle1On, isToggle2On, isToggle3On, isToggle4On)
+                val response = RetrofitClient.apiService.updateAlarmSettings(token, settings)
+                if (!response.isSuccessful) {
+                    Toast.makeText(requireContext(), "Failed to update alarm settings", Toast.LENGTH_SHORT).show()
+                }
+            } catch (e: HttpException) {
+                Toast.makeText(requireContext(), "Network error", Toast.LENGTH_SHORT).show()
+            } catch (e: Exception) {
+                Toast.makeText(requireContext(), "An error occurred", Toast.LENGTH_SHORT).show()
+            }
         }
+    }
 
-        // Individual toggle functionality for toggle3
-        toggle3.setOnClickListener {
-            isToggle3On = !isToggle3On
-            setToggleImages(toggle3, isToggle3On)
-        }
+    private fun updateToggleUI() {
+        setToggleImages(toggle1, isToggle1On)
+        setToggleImages(toggle2, isToggle2On)
+        setToggleImages(toggle3, isToggle3On)
+        setToggleImages(toggle4, isToggle4On)
+    }
 
-        // Individual toggle functionality for toggle5
-        toggle5.setOnClickListener {
-            isToggle5On = !isToggle5On
-            setToggleImages(toggle5, isToggle5On)
-        }
-
-        // Individual toggle functionality for toggle6
-        toggle6.setOnClickListener {
-            isToggle6On = !isToggle6On
-            setToggleImages(toggle6, isToggle6On)
-        }
-
-        // Logout TextView 클릭 리스너 설정
+    // 기존의 setupLogoutAndDeleteListeners, showLogoutDialog, showDeleteDialog, showTemporaryDialog 메서드들은 그대로 유지
+    private fun setupLogoutAndDeleteListeners(view: View) {
         val logout: TextView = view.findViewById(R.id.tv_setting_logout)
         logout.setOnClickListener {
             showLogoutDialog()
@@ -89,17 +148,9 @@ class Mypage_SettingFragment : Fragment() {
         delete.setOnClickListener {
             showDeleteDialog()
         }
-
-        return view
     }
 
-    private fun setToggleImages(imageView: ImageView, isOn: Boolean) {
-        if (isOn) {
-            imageView.setImageResource(R.drawable.ic_setting_on)
-        } else {
-            imageView.setImageResource(R.drawable.ic_setting_off)
-        }
-    }
+    // showLogoutDialog, showDeleteDialog, showTemporaryDialog 메서드들은 그대로 유지
 
     private fun showLogoutDialog() {
         val dialogView = layoutInflater.inflate(R.layout.dialog_logout, null)
@@ -113,7 +164,7 @@ class Mypage_SettingFragment : Fragment() {
         val cancelButton: View = dialogView.findViewById(R.id.iv_logout_cancel)
 
         logoutButton.setOnClickListener {
-            // 여기에 로그아웃 로직 추가
+            performLogout()
             dialog.dismiss()
         }
 
@@ -127,6 +178,18 @@ class Mypage_SettingFragment : Fragment() {
             (342 * resources.displayMetrics.density).toInt(),
             (162 * resources.displayMetrics.density).toInt()
         )
+    }
+
+    private fun performLogout() {
+        lifecycleScope.launch {
+            try {
+                val response = RetrofitClient.apiService.logout(token)
+                // 백엔드 응답과 관계없이 StartActivity로 이동
+                navigateToStartActivity()
+            } catch (e: Exception) {
+                Toast.makeText(requireContext(), "로그아웃 중 오류가 발생했습니다.", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     private fun showDeleteDialog() {
@@ -141,8 +204,8 @@ class Mypage_SettingFragment : Fragment() {
         val cancelButton: View = dialogView.findViewById(R.id.iv_delete_cancel)
 
         DeleteButton.setOnClickListener {
+            performDeleteAccount()
             dialog.dismiss()
-            showTemporaryDialog()
         }
 
         cancelButton.setOnClickListener {
@@ -151,12 +214,34 @@ class Mypage_SettingFragment : Fragment() {
 
         dialog.show()
 
-        // 다이얼로그 크기 설정
         dialog.window?.setLayout(
             (342 * resources.displayMetrics.density).toInt(),
             (162 * resources.displayMetrics.density).toInt()
         )
     }
+
+    private fun performDeleteAccount() {
+        lifecycleScope.launch {
+            try {
+                val response = RetrofitClient.apiService.deleteAccount(token)
+                showTemporaryDialog()
+                // 3초 후 StartActivity로 이동
+                Handler(Looper.getMainLooper()).postDelayed({
+                    navigateToStartActivity()
+                }, 3000)
+            } catch (e: Exception) {
+                Toast.makeText(requireContext(), "계정 삭제 중 오류가 발생했습니다.", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun navigateToStartActivity() {
+        val intent = Intent(requireContext(), StartActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
+        requireActivity().finish()
+    }
+
 
     // 3초 동안 보여주는 임시 다이얼로그를 표시하는 함수
     private fun showTemporaryDialog() {

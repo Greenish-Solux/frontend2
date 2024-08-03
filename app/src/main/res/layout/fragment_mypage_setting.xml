@@ -10,317 +10,255 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        tools:ignore="MissingConstraints">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            tools:ignore="MissingConstraints">
 
 
-        <ImageView
-            android:id="@+id/iv_setting_bar"
-            android:layout_width="66dp"
-            android:layout_height="4dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="6dp"
-            android:src="@drawable/ic_mypage_bar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/iv_setting_bar"
+                android:layout_width="66dp"
+                android:layout_height="4dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/ic_mypage_bar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="395dp"
-        android:background="#EFEFF1">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="290dp"
+            android:background="#EFEFF1">
 
-        <ImageView
-            android:id="@+id/iv_setting_box1"
-            android:layout_width="340dp"
-            android:layout_height="348dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/bg_r10_white_fill"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/iv_setting_box1"
+                android:layout_width="340dp"
+                android:layout_height="248dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/bg_r10_white_fill"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_setting_text1"
-            android:layout_width="159dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="51dp"
-            android:layout_marginTop="36dp"
-            android:fontFamily="@font/prebold"
-            android:gravity="center_vertical|start"
-            android:text="푸시 알림 설정"
-            android:textColor="#000000"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            <TextView
+                android:id="@+id/tv_setting_text1"
+                android:layout_width="159dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="51dp"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/prebold"
+                android:gravity="center_vertical|start"
+                android:text="푸시 알림 설정"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
 
-            />
+                />
 
-        <TextView
-            android:id="@+id/tv_setting_text2"
-            android:layout_width="97dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="68dp"
-            android:layout_marginTop="74dp"
-            android:fontFamily="@font/premedium"
-            android:gravity="center_vertical|start"
-            android:text="전체 알림"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/tv_setting_text2"
+                android:layout_width="97dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="74dp"
+                android:fontFamily="@font/premedium"
+                android:gravity="center_vertical|start"
+                android:text="전체 알림"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/iv_setting_box2"
-            android:layout_width="254dp"
-            android:layout_height="82dp"
-            android:layout_marginStart="68dp"
-            android:layout_marginTop="110dp"
-            android:src="@drawable/ic_setting_box2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/iv_setting_box2"
+                android:layout_width="254dp"
+                android:layout_height="122dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="110dp"
+                android:src="@drawable/bg_r10_lightgray_line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/iv_setting_toggle1"
-            android:layout_width="32dp"
-            android:layout_height="17dp"
-            android:layout_marginStart="135dp"
-            android:layout_marginTop="83dp"
-            android:src="@drawable/ic_setting_on"
-            android:clickable="true"
-            android:focusable="true"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/iv_setting_toggle1"
+                android:layout_width="32dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="135dp"
+                android:layout_marginTop="83dp"
+                android:src="@drawable/ic_setting_on"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_setting_text3"
-            android:layout_width="97dp"
-            android:layout_height="36dp"
-            android:layout_marginStart="93dp"
-            android:layout_marginTop="117dp"
-            android:fontFamily="@font/premedium"
-            android:gravity="center_vertical|start"
-            android:text="햅틱 모드"
-            android:textColor="#989898"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/tv_setting_text3"
+                android:layout_width="97dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="93dp"
+                android:layout_marginTop="117dp"
+                android:fontFamily="@font/premedium"
+                android:gravity="center_vertical|start"
+                android:text="진동 여부"
+                android:textColor="#989898"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/iv_setting_toggle2"
-            android:layout_width="32dp"
-            android:layout_height="17dp"
-            android:layout_marginStart="161dp"
-            android:layout_marginTop="126dp"
-            android:src="@drawable/ic_setting_on"
-            android:clickable="true"
-            android:focusable="true"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/iv_setting_toggle2"
+                android:layout_width="32dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="161dp"
+                android:layout_marginTop="126dp"
+                android:src="@drawable/ic_setting_on"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_setting_text4"
-            android:layout_width="97dp"
-            android:layout_height="36dp"
-            android:layout_marginStart="93dp"
-            android:layout_marginTop="149dp"
-            android:fontFamily="@font/premedium"
-            android:gravity="center_vertical|start"
-            android:text="미리 보기"
-            android:textColor="#989898"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/tv_setting_text4"
+                android:layout_width="127dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="93dp"
+                android:layout_marginTop="149dp"
+                android:fontFamily="@font/premedium"
+                android:gravity="center_vertical|start"
+                android:text="잠금 화면 미리 보기"
+                android:textColor="#989898"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/iv_setting_toggle3"
-            android:layout_width="32dp"
-            android:layout_height="17dp"
-            android:layout_marginStart="161dp"
-            android:layout_marginTop="158dp"
-            android:src="@drawable/ic_setting_on"
-            android:clickable="true"
-            android:focusable="true"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <TextView
-            android:id="@+id/tv_setting_text5"
-            android:layout_width="97dp"
-            android:layout_height="36dp"
-            android:layout_marginStart="68dp"
-            android:layout_marginTop="211dp"
-            android:fontFamily="@font/premedium"
-            android:gravity="center_vertical|start"
-            android:text="물주기 알림"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/iv_setting_box3"
-            android:layout_width="251dp"
-            android:layout_height="93dp"
-            android:layout_marginStart="71dp"
-            android:layout_marginTop="247dp"
-            android:src="@drawable/ic_setting_box3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/iv_setting_toggle4"
-            android:layout_width="32dp"
-            android:layout_height="17dp"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="222dp"
-            android:src="@drawable/ic_setting_on"
-            android:clickable="true"
-            android:focusable="true"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/tv_setting_text6"
-            android:layout_width="128dp"
-            android:layout_height="36dp"
-            android:layout_marginStart="93dp"
-            android:layout_marginTop="259dp"
-            android:fontFamily="@font/premedium"
-            android:gravity="center_vertical|start"
-            android:text="전체 식물 물주기 알림"
-            android:textColor="#989898"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/iv_setting_toggle5"
-            android:layout_width="32dp"
-            android:layout_height="17dp"
-            android:layout_marginStart="225dp"
-            android:layout_marginTop="269dp"
-            android:src="@drawable/ic_setting_on"
-            android:clickable="true"
-            android:focusable="true"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/tv_setting_text7"
-            android:layout_width="97dp"
-            android:layout_height="36dp"
-            android:layout_marginStart="93dp"
-            android:layout_marginTop="291dp"
-            android:fontFamily="@font/premedium"
-            android:gravity="center_vertical|start"
-            android:text="물주기 기록 알림"
-            android:textColor="#989898"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/iv_setting_toggle6"
-            android:layout_width="32dp"
-            android:layout_height="17dp"
-            android:layout_marginStart="196dp"
-            android:layout_marginTop="300dp"
-            android:src="@drawable/ic_setting_on"
-            android:clickable="true"
-            android:focusable="true"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/iv_setting_toggle3"
+                android:layout_width="32dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="215dp"
+                android:layout_marginTop="158dp"
+                android:src="@drawable/ic_setting_on"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/tv_setting_text6"
+                android:layout_width="128dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="93dp"
+                android:layout_marginTop="181dp"
+                android:fontFamily="@font/premedium"
+                android:gravity="center_vertical|start"
+                android:text="전체 식물 물주기 알림"
+                android:textColor="#989898"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="230dp"
-        android:background="#EFEFF1">
+            <ImageView
+                android:id="@+id/iv_setting_toggle4"
+                android:layout_width="32dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="225dp"
+                android:layout_marginTop="190dp"
+                android:src="@drawable/ic_setting_on"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
-        <ImageView
-            android:id="@+id/iv_setting_box4"
-            android:layout_width="340dp"
-            android:layout_height="147dp"
-            android:layout_marginStart="25dp"
-            android:src="@drawable/bg_r10_white_fill"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:id="@+id/tv_setting_text8"
-            android:layout_width="159dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="51dp"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/prebold"
-            android:gravity="center_vertical|start"
-            android:text="계정 상태"
-            android:textColor="#000000"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:background="#EFEFF1">
 
-        <ImageView
-            android:id="@+id/iv_setting_box5"
-            android:layout_width="120dp"
-            android:layout_height="42dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="66dp"
-            android:src="@drawable/bg_r10_green_line"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/iv_setting_box6"
-            android:layout_width="120dp"
-            android:layout_height="42dp"
-            android:layout_marginStart="210dp"
-            android:layout_marginTop="66dp"
-            android:src="@drawable/bg_r10_red_line"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/iv_setting_box4"
+                android:layout_width="340dp"
+                android:layout_height="147dp"
+                android:layout_marginStart="25dp"
+                android:src="@drawable/bg_r10_white_fill"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_setting_logout"
-            android:layout_width="120dp"
-            android:layout_height="31dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="72dp"
-            android:fontFamily="@font/premedium"
-            android:gravity="center"
-            android:text="로그아웃"
-            android:textColor="#5AC479"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/tv_setting_text8"
+                android:layout_width="159dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="51dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/prebold"
+                android:gravity="center_vertical|start"
+                android:text="계정 상태"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_setting_delete"
-            android:layout_width="103dp"
-            android:layout_height="31dp"
-            android:layout_marginStart="218dp"
-            android:layout_marginTop="72dp"
-            android:fontFamily="@font/premedium"
-            android:gravity="center"
-            android:text="계정 삭제"
-            android:textColor="#FF0000"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/iv_setting_box5"
+                android:layout_width="120dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="66dp"
+                android:src="@drawable/bg_r10_green_line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_setting_box6"
+                android:layout_width="120dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="210dp"
+                android:layout_marginTop="66dp"
+                android:src="@drawable/bg_r10_red_line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_setting_logout"
+                android:layout_width="120dp"
+                android:layout_height="31dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="72dp"
+                android:fontFamily="@font/premedium"
+                android:gravity="center"
+                android:text="로그아웃"
+                android:textColor="#5AC479"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_setting_delete"
+                android:layout_width="103dp"
+                android:layout_height="31dp"
+                android:layout_marginStart="218dp"
+                android:layout_marginTop="72dp"
+                android:fontFamily="@font/premedium"
+                android:gravity="center"
+                android:text="계정 삭제"
+                android:textColor="#FF0000"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
 
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-</LinearLayout>
+    </LinearLayout>
 </ScrollView>
