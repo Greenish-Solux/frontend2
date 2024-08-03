@@ -1450,7 +1450,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/premedium"
-                        android:text="위 에요:("
+                        android:text="위에요:("
                         android:textColor="@color/Greenish_white"
                         android:textSize="16sp" />
                 </LinearLayout>
@@ -1467,7 +1467,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/prebold"
-                        android:text="0"
+                        android:text="green"
                         android:textColor="@color/Greenish_white"
                         android:textSize="12sp" />
 

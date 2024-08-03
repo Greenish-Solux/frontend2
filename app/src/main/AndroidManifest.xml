@@ -45,7 +45,19 @@
         <activity android:name=".StartPage.LoginActivity"
             android:exported="false"/>
 
-
+        <activity
+            android:name=".MyPlantDiaryInside"
+            android:exported="false" />
+        <activity
+            android:name=".PlantDiaryAdd"
+            android:exported="false" />
+        <activity
+            android:name=".MyPlantAdd"
+            android:exported="true" />
+        <activity
+            android:name=".MyPlantProfile"
+            android:exported="true"
+            android:launchMode="singleTop" />
 
         <activity
             android:name=".MainActivity"

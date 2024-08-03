@@ -3,6 +3,7 @@ package com.example.greenish
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.greenish.SearchpageANDMypage.MypageFragment
+
 import com.example.greenish.SearchpageANDMypage.SearchFragment
 import com.example.greenish.databinding.ActivityMainBinding
 import com.example.greenish.ui.home.HomeFragment
@@ -35,10 +36,10 @@ class MainActivity : AppCompatActivity() {
                     supportFragmentManager.beginTransaction().replace(R.id.main_container, CalendarFragment()).commit()
                     true
                 }
-//                R.id.navigation_diary -> {
-//                    supportFragmentManager.beginTransaction().replace(R.id.main_container, MyPlantFragment()).commit()
-//                    true
-//                }
+                R.id.navigation_diary -> {
+                    supportFragmentManager.beginTransaction().replace(R.id.main_container, MyPlantFragment()).commit()
+                    true
+                }
                 R.id.navigation_search -> {
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.main_container, SearchFragment()).commit()

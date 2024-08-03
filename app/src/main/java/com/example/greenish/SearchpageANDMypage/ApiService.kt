@@ -85,5 +85,23 @@ interface ApiService {
         val recordCount: Int,
         val profileImageUrl: String
     )
+
+    @GET("plants/{id}")
+    suspend fun getPlantInfo(@Header("Authorization") token: String, @Path("id") id: Int): Response<PlantInfo>
+
+    data class PlantInfo(
+        val success: Boolean,
+        val count: Int,
+        val data: PlantData
+    )
+
+    data class PlantData(
+        val id: Int,
+        val name: String,
+        val code: String?,
+        val watercycle: Int,
+        val posts: List<Any>,
+        val photoUrl: String
+    )
 }
 

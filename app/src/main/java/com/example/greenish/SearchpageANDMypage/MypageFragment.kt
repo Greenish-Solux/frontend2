@@ -34,7 +34,7 @@ class MypageFragment : Fragment() {
     private lateinit var emailTextView: TextView
     private val PERMISSION_REQUEST_CODE = 100
 
-    private val token = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImdyZWVuQGdtYWlsLmNvbSIsInJvbGUiOiJST0xFX1VTRVIiLCJpYXQiOjE3MjI3MDk5NDksImV4cCI6MTcyMjcxMzU0OX0.M4otbCF5e55aRCejeXxvx-J4KABkMf7_jvpG9cw1LCI"
+    private val token = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImVtYWlsNkBnbWFpbC5jb20iLCJyb2xlIjoiUk9MRV9VU0VSIiwiaWF0IjoxNzIyNzE1Nzc2LCJleHAiOjE3MjI3MTkzNzZ9.xEVSUJY0JXSB1LZ1bz5Ul7jCftKa-3ZvB4H4lnBbdXY"
 
     private val getContent = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
         uri?.let {
@@ -178,12 +178,10 @@ class MypageFragment : Fragment() {
         nicknameTextView.text = userInfo.nickname
         emailTextView.text = userInfo.email
 
-        // photo 객체가 null이 아니고, url이 null이 아니며, 비어있지 않은 경우에만 이미지를 로드합니다.
         if (userInfo.photo?.url != null && userInfo.photo.url.isNotBlank()) {
-            Glide.with(this)
-                .load(userInfo.photo.url)
-                .into(profileImage)
+            fetchPlantInfo()
         } else {
+            // 기본 이미지 설정
 
         }
 
@@ -192,6 +190,32 @@ class MypageFragment : Fragment() {
             // photoId를 사용하는 로직
             println("Photo ID: $id")
         }
+    }
+
+    private fun fetchPlantInfo() {
+        lifecycleScope.launch {
+            try {
+                val response = RetrofitClient.apiService.getPlantInfo(token, 2)
+                if (response.isSuccessful) {
+                    val plantInfo = response.body()
+                    plantInfo?.let {
+                        updateProfileImage(it.data.photoUrl)
+                    }
+                } else {
+                    Toast.makeText(requireContext(), "Failed to fetch plant info", Toast.LENGTH_SHORT).show()
+                }
+            } catch (e: HttpException) {
+                Toast.makeText(requireContext(), "Network error", Toast.LENGTH_SHORT).show()
+            } catch (e: Exception) {
+                Toast.makeText(requireContext(), "An error occurred", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun updateProfileImage(photoUrl: String) {
+        Glide.with(this)
+            .load(photoUrl)
+            .into(profileImage)
     }
 
     private fun uploadImage(uri: Uri) {
@@ -217,12 +241,6 @@ class MypageFragment : Fragment() {
                 Toast.makeText(requireContext(), "An error occurred", Toast.LENGTH_SHORT).show()
             }
         }
-    }
-
-    private fun updateProfileImage(photoUrl: String) {
-        Glide.with(this)
-            .load(photoUrl)
-            .into(profileImage)
     }
 
     private fun getFileFromUri(uri: Uri): File {
