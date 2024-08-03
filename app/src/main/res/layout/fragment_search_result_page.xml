@@ -20,7 +20,7 @@
                 android:layout_marginStart="49dp"
                 android:layout_marginTop="14dp"
                 android:fontFamily="@font/prebold"
-                android:text="선인장"
+                android:text=""
                 android:textColor="#5AC479"
                 android:textSize="22sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,6 @@
                 android:layout_height="290dp"
                 android:layout_marginStart="49dp"
                 android:layout_marginTop="14dp"
-                android:src="@drawable/ic_search_result"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_search_result_page_title" />
 

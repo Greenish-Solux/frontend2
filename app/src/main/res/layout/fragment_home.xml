@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.greenish.ui.home.HomeViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/prebold"
+                android:text="홈화면"
+                android:layout_marginStart="20dp"
+                android:textSize="20dp"
+                android:layout_gravity="center_vertical"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_book_empty"
+                android:layout_marginStart="220dp"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/Greenish_lightgrey"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_home_weather"
+            android:orientation="horizontal"
+
+            android:layout_width="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="물주기 체크"
+            android:textSize="24sp"
+            android:paddingStart="10dp"
+            android:fontFamily="@font/prebold"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_home_watercycle"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_guidebook_banner"
+            android:padding="10dp"
+            android:layout_marginHorizontal="10dp">
+
+            <TextView
+                android:id="@+id/tv_home_banner1_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/prebold"
+                android:text="온도 조절은 잘 되시나요?"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_home_banner1_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/premedium"
+                android:text="식물이 잘 자라기 위해서는 온도 조절이 필요해요!"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/tv_home_banner1_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_banner1_title" />
+
+            <TextView
+                android:id="@+id/tv_home_banner1_step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 / 5"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="3dp"
+                android:textColor="@color/Greenish_white"
+                android:textSize="12sp"
+                android:fontFamily="@font/premedium"
+                android:background="@drawable/bg_banner_step"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_banner1_description" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>

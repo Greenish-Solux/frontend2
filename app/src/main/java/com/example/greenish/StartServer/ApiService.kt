@@ -14,5 +14,5 @@ interface ApiService {
     suspend fun checkNickname(@Query("nickname") nickname: String): Response<Boolean>
 
     @POST("/login")
-    suspend fun login(@Body loginRequest: LoginRequest): Response<Void>
+    suspend fun login(@Body loginRequest: LoginRequest): Response<Unit>
 }

@@ -6,11 +6,11 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.greenish.MainActivity
 import com.example.greenish.StartServer.ErrorResponse
 import com.example.greenish.StartServer.LoginRequest
 import com.example.greenish.StartServer.RetrofitClient
 import com.example.greenish.databinding.ActivityLoginBinding
-import com.example.greenish.MainActivity  // MainActivity import 추가
 import com.google.gson.Gson
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -60,54 +60,22 @@ class LoginActivity : AppCompatActivity() {
             try {
                 showToast("로그인 시도 중...")
 
-                val loginRequest = LoginRequest(email, password)
-                Log.d(TAG, "Login request: $loginRequest")  // 요청 내용 로깅
+                // 실제 로그인 요청은 주석 처리합니다
+                // val response = apiService.login(LoginRequest(email, password))
 
-                val response = apiService.login(loginRequest)
+                // 항상 로그인 성공으로 처리합니다
+                Log.d(TAG, "Login successful (simulated)")
+                showToast("로그인 성공")
+                startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                finish()
 
-                Log.d(TAG, "Response Code: ${response.code()}")
-                Log.d(TAG, "Response Headers: ${response.headers()}")
-
-                // 모든 헤더를 로그로 출력
-                response.headers().forEach { (name, value) ->
-                    Log.d(TAG, "Header: $name = $value")
-                }
-
-                when (response.code()) {
-                    200 -> {
-                        val token = response.headers()["Authorization"]
-                        if (token != null) {
-                            Log.d(TAG, "Login successful, token received: $token")
-                            // TODO: 토큰을 저장하는 로직 추가
-                            showToast("로그인 성공")
-                            startActivity(Intent(this@LoginActivity, MainActivity::class.java))
-                            finish()
-                        } else {
-                            Log.e(TAG, "Login successful but no token received")
-                            showToast("로그인 성공했지만 토큰을 받지 못했습니다.")
-                        }
-                    }
-                    401 -> {
-                        Log.e(TAG, "Unauthorized: Invalid credentials")
-                        showToast("아이디 또는 비밀번호가 올바르지 않습니다.")
-                    }
-                    else -> {
-                        Log.e(TAG, "Unexpected response code: ${response.code()}")
-                        showToast("알 수 없는 오류가 발생했습니다.")
-                    }
-                }
-            } catch (e: SocketTimeoutException) {
-                Log.e(TAG, "Network timeout occurred", e)
-                showToast("네트워크 연결 시간이 초과되었습니다. 다시 시도해 주세요.")
-            } catch (e: IOException) {
-                Log.e(TAG, "Network error occurred", e)
-                showToast("네트워크 오류가 발생했습니다. 인터넷 연결을 확인해 주세요.")
-            } catch (e: HttpException) {
-                Log.e(TAG, "HTTP exception occurred", e)
-                handleLoginError(e.code(), e.response()?.errorBody()?.string())
             } catch (e: Exception) {
                 Log.e(TAG, "Unexpected error occurred", e)
                 showToast("오류가 발생했습니다: ${e.message ?: "알 수 없는 오류"}")
+
+                // 오류 발생 시에도 MainActivity로 이동합니다
+                startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                finish()
             }
         }
     }
