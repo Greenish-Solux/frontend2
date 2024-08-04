@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SearchFragment"
+    tools:context=".SearchpageANDMypage.SearchFragment"
     tools:ignore="ExtraText">
 
     <LinearLayout
@@ -81,12 +81,22 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <ImageView
+                android:id="@+id/iv_mypage_main_profile_change"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="46dp"
+                android:src="@drawable/ic_mypage_profile_change"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
                 android:id="@+id/tv_mypage_text2"
-                android:layout_width="50dp"
-                android:layout_height="36dp"
+                android:layout_width="250dp"
+                android:layout_height="30dp"
                 android:fontFamily="@font/prebold"
-                android:text="앱파민"
+                android:text=""
                 android:textColor="#5AC479"
                 android:textSize="18sp"
                 android:layout_marginStart="101dp"
@@ -99,23 +109,15 @@
                 android:layout_width="187dp"
                 android:layout_height="36dp"
                 android:fontFamily="@font/premedium"
-                android:text="카카오 계정으로 로그인"
+                android:text=""
                 android:textColor="#9C9C9C"
                 android:textSize="12sp"
-                android:layout_marginStart="121dp"
+                android:layout_marginStart="101dp"
                 android:layout_marginTop="37dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/iv_mypage_main_kakao"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:layout_marginStart="101dp"
-                android:layout_marginTop="38dp"
-                android:src="@drawable/ic_mypage_kakao"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+
 
 
 
