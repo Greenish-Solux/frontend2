@@ -2,11 +2,12 @@ package com.example.greenish
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.greenish.MainPage.HomeFragment
 import com.example.greenish.SearchpageANDMypage.MypageFragment
 
 import com.example.greenish.SearchpageANDMypage.SearchFragment
 import com.example.greenish.databinding.ActivityMainBinding
-import com.example.greenish.ui.home.HomeFragment
+
 
 class MainActivity : AppCompatActivity() {
     private val binding: ActivityMainBinding by lazy {

@@ -52,8 +52,13 @@ class PlantGridAdapter(private val context: Context) :
                 .error(R.drawable.placeholderimage)
                 .into(holder.imageView)
         } else {
-            // 이미지 URL이 없는 경우 기본 이미지 설정
-            holder.imageView.setImageResource(R.drawable.placeholderimage)
+            // 이미지 URL이 없는 경우 두 가지 기본 이미지를 번갈아 설정
+            val defaultImageResource = if (position % 2 == 0) {
+                R.drawable.placeholderimage1
+            } else {
+                R.drawable.placeholderimage2
+            }
+            holder.imageView.setImageResource(defaultImageResource)
         }
 
         return view

@@ -1,4 +1,4 @@
-package com.example.greenish.ui.home
+package com.example.greenish.MainPage
 
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
@@ -15,8 +15,7 @@ import java.util.*
     val parsedDate = dateFormatter.parse(date) ?: return
 
     val dayFormatter = SimpleDateFormat("d", Locale.getDefault())  // Day of the month
-    val monthFormatter = SimpleDateFormat("MMM", Locale.getDefault())  // Abbreviated month
-    val formattedDate = "${dayFormatter.format(parsedDate)} ${monthFormatter.format(parsedDate)}"
+    val formattedDate = dayFormatter.format(parsedDate)
     text = formattedDate
 }
 
@@ -29,6 +28,6 @@ import java.util.*
     val dateFormatter = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
     val parsedDate = dateFormatter.parse(date) ?: return
 
-    val dayFormatter = SimpleDateFormat("EEEE", Locale.getDefault())  // Full day of the week
+    val dayFormatter = SimpleDateFormat("EEE", Locale.getDefault())  // day of the week
     text = dayFormatter.format(parsedDate)
 }

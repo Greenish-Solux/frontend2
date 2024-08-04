@@ -34,7 +34,7 @@ class MypageFragment : Fragment() {
     private lateinit var emailTextView: TextView
     private val PERMISSION_REQUEST_CODE = 100
 
-    private val token = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImVtYWlsNkBnbWFpbC5jb20iLCJyb2xlIjoiUk9MRV9VU0VSIiwiaWF0IjoxNzIyNzE1Nzc2LCJleHAiOjE3MjI3MTkzNzZ9.xEVSUJY0JXSB1LZ1bz5Ul7jCftKa-3ZvB4H4lnBbdXY"
+    private val token = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImdyZWVuQGdtYWlsLmNvbSIsInJvbGUiOiJST0xFX1VTRVIiLCJpYXQiOjE3MjI3ODY0MjYsImV4cCI6MTcyMjc5MDAyNn0.C_zE7N0vYIvUEyPxkEajQy1O9GNG3PKysWfknHzeBWc"
 
     private val getContent = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
         uri?.let {

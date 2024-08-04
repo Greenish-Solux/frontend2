@@ -74,16 +74,16 @@ interface ApiService {
     suspend fun getRanking(@Header("Authorization") token: String): Response<RankingResponse>
 
     data class RankingResponse(
-        val myRank: RankingUser,
-        val topUsers: List<RankingUser>
+        val TopUsers: List<RankingUser>,
+        val MyRank: RankingUser
     )
 
     data class RankingUser(
         val userId: Int,
         val nickname: String,
         val rank: Int,
-        val recordCount: Int,
-        val profileImageUrl: String
+        val profileImageUrl: String,
+        val recordCount: Int
     )
 
     @GET("plants/{id}")
