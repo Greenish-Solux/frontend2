@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Greenish_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+`
+            <ImageView
+                android:id="@+id/ic_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/prebold"
+                android:text="초보 식집사 가이드북"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/iv_home_bookmark_fill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="90dp"
+                android:src="@drawable/ic_book_fill" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:bufferType="spannable"
+            android:fontFamily="@font/prebold"
+            android:text="초보 식집사 가이드북으로\n더 똑똑하게 식물을 길러보세요"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/scroll_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/premedium"
+            android:text="스크롤해서 살펴보기▼"
+            android:textColor="@color/Greenish_darkgrey"
+            android:textSize="14sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_guidebook_banner1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_guidebook_banner"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tv_guidebook_card1_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/prebold"
+                android:text="@string/guide1_title"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_guidebook_card1_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/premedium"
+                android:text="먼저, 어떤 식물을 키울지를 결정해야 합니다..."
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/view_guidebook_card1_line"
+                app:layout_constraintTop_toBottomOf="@id/tv_guidebook_card1_title" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_guidebook_card1_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="240dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_r100_green_line"
+                android:fontFamily="@font/premedium"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                android:text="더 읽어보기"
+                android:textColor="@color/Greenish_green"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/view_guidebook_card1_line"
+                app:layout_constraintTop_toBottomOf="@+id/tv_guidebook_card1_description" />
+
+            <View
+                android:id="@+id/view_guidebook_card1_line"
+                android:layout_width="3dp"
+                android:layout_height="0dp"
+                android:background="@color/Greenish_black"
+                app:layout_constraintBottom_toBottomOf="@id/tv_guidebook_card1_description"
+                app:layout_constraintStart_toStartOf="@id/tv_guidebook_card1_title"
+                app:layout_constraintTop_toTopOf="@id/tv_guidebook_card1_description" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_guidebook_banner2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_guidebook_banner"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tv_guidebook_card2_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/prebold"
+                android:text="@string/guide2_title"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_guidebook_card2_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/premedium"
+                android:text="1. 다육식물의 특징 : 다육식물은 물을 저장할..."
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/view_guidebook_card2_line"
+                app:layout_constraintTop_toBottomOf="@id/tv_guidebook_card2_title" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_guidebook_card2_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="240dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_r100_green_line"
+                android:fontFamily="@font/premedium"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                android:text="더 읽어보기"
+                android:textColor="@color/Greenish_green"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/view_guidebook_card2_line"
+                app:layout_constraintTop_toBottomOf="@+id/tv_guidebook_card2_description" />
+
+            <View
+                android:id="@+id/view_guidebook_card2_line"
+                android:layout_width="3dp"
+                android:layout_height="0dp"
+                android:background="@color/Greenish_black"
+                app:layout_constraintBottom_toBottomOf="@id/tv_guidebook_card2_description"
+                app:layout_constraintStart_toStartOf="@id/tv_guidebook_card2_title"
+                app:layout_constraintTop_toTopOf="@id/tv_guidebook_card2_description" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_guidebook_banner3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_guidebook_banner"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tv_guidebook_card3_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/prebold"
+                android:text="@string/guide3_title"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_guidebook_card3_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/premedium"
+                android:text="분갈이 때문에 식물이 죽기도 해서 많이들 걱정이..."
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/view_guidebook_card3_line"
+                app:layout_constraintTop_toBottomOf="@id/tv_guidebook_card3_title" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_guidebook_card3_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="240dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_r100_green_line"
+                android:fontFamily="@font/premedium"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                android:text="더 읽어보기"
+                android:textColor="@color/Greenish_green"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/view_guidebook_card3_line"
+                app:layout_constraintTop_toBottomOf="@+id/tv_guidebook_card3_description" />
+
+            <View
+                android:id="@+id/view_guidebook_card3_line"
+                android:layout_width="3dp"
+                android:layout_height="0dp"
+                android:background="@color/Greenish_black"
+                app:layout_constraintBottom_toBottomOf="@id/tv_guidebook_card3_description"
+                app:layout_constraintStart_toStartOf="@id/tv_guidebook_card3_title"
+                app:layout_constraintTop_toTopOf="@id/tv_guidebook_card3_description" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_guidebook_banner4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_guidebook_banner"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tv_guidebook_card4_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/prebold"
+                android:text="@string/guide4_title"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_guidebook_card4_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/premedium"
+                android:text="1. 더운 낮에 물을 주면 흙 온도가 올라 식물이 상할..."
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/view_guidebook_card4_line"
+                app:layout_constraintTop_toBottomOf="@id/tv_guidebook_card4_title" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_guidebook_card4_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="240dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_r100_green_line"
+                android:fontFamily="@font/premedium"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                android:text="더 읽어보기"
+                android:textColor="@color/Greenish_green"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/view_guidebook_card4_line"
+                app:layout_constraintTop_toBottomOf="@+id/tv_guidebook_card4_description" />
+
+            <View
+                android:id="@+id/view_guidebook_card4_line"
+                android:layout_width="3dp"
+                android:layout_height="0dp"
+                android:background="@color/Greenish_black"
+                app:layout_constraintBottom_toBottomOf="@id/tv_guidebook_card4_description"
+                app:layout_constraintStart_toStartOf="@id/tv_guidebook_card4_title"
+                app:layout_constraintTop_toTopOf="@id/tv_guidebook_card4_description" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_guidebook_banner5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_guidebook_banner"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tv_guidebook_card5_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/prebold"
+                android:text="@string/guide5_title"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_guidebook_card5_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/premedium"
+                android:text="습도가 높은 장마철, 과습이 발생하면 뿌리부터..."
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/view_guidebook_card5_line"
+                app:layout_constraintTop_toBottomOf="@id/tv_guidebook_card5_title" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_guidebook_card5_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="240dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_r100_green_line"
+                android:fontFamily="@font/premedium"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                android:text="더 읽어보기"
+                android:textColor="@color/Greenish_green"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/view_guidebook_card5_line"
+                app:layout_constraintTop_toBottomOf="@+id/tv_guidebook_card5_description" />
+
+            <View
+                android:id="@+id/view_guidebook_card5_line"
+                android:layout_width="3dp"
+                android:layout_height="0dp"
+                android:background="@color/Greenish_black"
+                app:layout_constraintBottom_toBottomOf="@id/tv_guidebook_card5_description"
+                app:layout_constraintStart_toStartOf="@id/tv_guidebook_card5_title"
+                app:layout_constraintTop_toTopOf="@id/tv_guidebook_card5_description" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_guidebook_banner6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_guidebook_banner"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tv_guidebook_card6_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/prebold"
+                android:text="@string/guide6_title"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_guidebook_card6_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/premedium"
+                android:text="1. 찬물보다 미지근한 미온수를 관수해주세요..."
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/view_guidebook_card6_line"
+                app:layout_constraintTop_toBottomOf="@id/tv_guidebook_card6_title" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_guidebook_card6_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="240dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_r100_green_line"
+                android:fontFamily="@font/premedium"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                android:text="더 읽어보기"
+                android:textColor="@color/Greenish_green"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/view_guidebook_card6_line"
+                app:layout_constraintTop_toBottomOf="@+id/tv_guidebook_card6_description" />
+
+            <View
+                android:id="@+id/view_guidebook_card6_line"
+                android:layout_width="3dp"
+                android:layout_height="0dp"
+                android:background="@color/Greenish_black"
+                app:layout_constraintBottom_toBottomOf="@id/tv_guidebook_card6_description"
+                app:layout_constraintStart_toStartOf="@id/tv_guidebook_card6_title"
+                app:layout_constraintTop_toTopOf="@id/tv_guidebook_card6_description" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

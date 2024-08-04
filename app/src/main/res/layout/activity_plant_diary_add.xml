@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".PlantDiaryAdd">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/Greenish_white">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/topBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="#FFF"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageButton
+                        android:id="@+id/bt_plantdiary_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="17dp"
+                        android:adjustViewBounds="true"
+                        android:background="#00ff0000"
+                        android:src="@drawable/ic_cal_diary_backbtn"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/myplant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="59dp"
+                        android:fontFamily="@font/premedium"
+                        android:text="내 식물"
+                        android:textAlignment="center"
+                        android:textColor="@color/Greenish_black"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/guidebook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="20dp"
+                        android:adjustViewBounds="true"
+                        android:background="#00ff0000"
+                        android:src="@drawable/ic_cal_diary_guidebook"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#D2D2D2"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/topBar" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/topBar">
+
+                    <ImageButton
+                        android:id="@+id/bt_plantdiary_photo"
+                        android:layout_width="314dp"
+                        android:layout_height="175dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="26dp"
+                        android:background="@drawable/myplantaddphoto" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/premedium"
+                        android:text="제목"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/editTextTitle"
+                        android:layout_width="320dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/edittextd"
+                        android:padding="10dp"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/premedium"
+                        android:text="성장일기"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/editTextContent"
+                        android:layout_width="320dp"
+                        android:layout_height="195dp"
+                        android:background="@drawable/edittextd"
+                        android:gravity="top"
+                        android:padding="10dp"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/bt_plantdiary_cancel"
+                        android:layout_width="440px"
+                        android:layout_height="140px"
+                        android:layout_margin="15px"
+                        android:background="@drawable/bg_r10_green_line"
+                        android:text="취소하기"
+                        android:textColor="@color/Greenish_green" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/bt_plantdiary_write"
+                        android:layout_width="440px"
+                        android:layout_height="140px"
+                        android:layout_margin="15px"
+                        android:background="@drawable/bg_r10_green_fill"
+                        android:stateListAnimator="@null"
+                        android:text="등록하기"
+                        android:textColor="@color/Greenish_white" />
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

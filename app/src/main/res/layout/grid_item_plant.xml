@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--    <data>-->
+<!--        <variable-->
+<!--            name="plant"-->
+<!--            type="com.example.greenish.Plant" />-->
+<!--    </data>-->
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <ImageView
+            android:id="@+id/plantImageView"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/plantNameTextView"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="4dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:textSize="14sp"-->
+        <!--            android:text="@{plant.name}" />-->
+
+    </LinearLayout>
+</layout>

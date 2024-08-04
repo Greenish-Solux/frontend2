@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MyPlantAddActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Greenish_white"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#FFF"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_myplantadd_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="140dp"
+                android:fontFamily="@font/premedium"
+                android:text="식물 정보 등록"
+                android:textAlignment="center"
+                android:textColor="@color/Greenish_black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D2D2D2" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/add_photo_button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="129dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/addphoto" />
+
+                <TextView
+                    android:id="@+id/plantname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/premedium"
+                    android:text="식물 이름"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/name_area"
+                    android:layout_width="314dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="39dp"
+                    android:background="@drawable/info_border"
+                    android:fontFamily="@font/premedium"
+                    android:hint="식물 이름을 지어주세요"
+                    android:padding="10dp"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/plant_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/premedium"
+                    android:text="식물 종류"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/plant_type_area"
+                    android:layout_width="314dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="39dp"
+                    android:background="@drawable/info_border"
+                    android:fontFamily="@font/premedium"
+                    android:hint="ex) 비젯티접란, 몬스테라"
+                    android:padding="10dp"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/premedium"
+                    android:text="식물 나이"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/age_area"
+                    android:layout_width="314dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="39dp"
+                    android:background="@drawable/info_border"
+                    android:fontFamily="@font/premedium"
+                    android:hint="1년 2개월"
+                    android:padding="10dp"
+                    android:textSize="13sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/cyclealarm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="39dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="3dp"
+                        android:fontFamily="@font/premedium"
+                        android:text="물주기 알림"
+                        android:textColor="#000000"
+                        android:textSize="16dp" />
+
+                    <Switch
+                        android:id="@+id/wateralarm_switch"
+                        android:layout_width="44dp"
+                        android:layout_height="21dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="18dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/plantinfo_cancel_button"
+                        android:layout_width="160dp"
+                        android:layout_height="54dp"
+                        android:layout_marginLeft="31dp"
+                        android:background="@drawable/bg_r10_green_line"
+                        android:text="취소하기"
+                        android:textColor="@color/Greenish_green"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/plantinfo_add_button"
+                        android:layout_width="160dp"
+                        android:layout_height="54dp"
+                        android:layout_marginLeft="13dp"
+                        android:background="@drawable/bg_r10_green_fill"
+                        android:text="등록하기"
+                        android:textColor="@color/Greenish_white" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</layout>

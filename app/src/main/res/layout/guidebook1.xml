@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="16dp"
+    android:background="@drawable/bg_guidebook_banner"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_guidebook_card1_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/prebold"
+        android:text="@string/guide1_title"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_guidebook_card1_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/premedium"
+        android:text="@string/guide1_description"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tv_guidebook_card1_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_guidebook_card1_title" />
+
+    <ImageButton
+        android:id="@+id/btn_guidebook1_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"  />
+</androidx.constraintlayout.widget.ConstraintLayout>
